@@ -1,0 +1,35 @@
+aspen.sounds.fm\_tone
+=====================
+
+.. automodule:: aspen.sounds.fm_tone
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      fm_tone
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      FmTone
+   
+   
+
+   
+   
+   
+
+
+

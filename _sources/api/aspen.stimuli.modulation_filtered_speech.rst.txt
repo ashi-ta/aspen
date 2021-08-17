@@ -1,0 +1,29 @@
+aspen.stimuli.modulation\_filtered\_speech
+==========================================
+
+.. automodule:: aspen.stimuli.modulation_filtered_speech
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ModulationFilteredSpeech
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,29 @@
+aspen.visualizations.spectrum\_visualizer
+=========================================
+
+.. automodule:: aspen.visualizations.spectrum_visualizer
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      SpectrumVisualizer
+   
+   
+
+   
+   
+   
+
+
+

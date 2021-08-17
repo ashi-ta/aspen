@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aspen.interfaces.abs_processing_interface &#8212; ASPEN  documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_paramlinks.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/katex-math.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+    <script src="../_static/katex_autorenderer.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="aspen.interfaces.abs_sound_interface" href="aspen.interfaces.abs_sound_interface.html" />
+    <link rel="prev" title="aspen.interfaces.abs_common_interface" href="aspen.interfaces.abs_common_interface.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../index.html">
+<p class="title">ASPEN</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../getting_started.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../configuration.html">
+  Customize Output
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../visualization.html">
+  Visualization
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="../api_references.html">
+  API References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="aspen.sounds.html">
+   aspen.sounds
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.sounds.am_tone.html">
+     aspen.sounds.am_tone
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.sounds.click_train_pitch.html">
+     aspen.sounds.click_train_pitch
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.sounds.colored_noise.html">
+     aspen.sounds.colored_noise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.sounds.complex_tone.html">
+     aspen.sounds.complex_tone
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.sounds.filtered_noise.html">
+     aspen.sounds.filtered_noise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.sounds.fm_tone.html">
+     aspen.sounds.fm_tone
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.sounds.pure_tone.html">
+     aspen.sounds.pure_tone
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="aspen.stimuli.html">
+   aspen.stimuli
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.stimuli.auditory_streaming.html">
+     aspen.stimuli.auditory_streaming
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.stimuli.continuity.html">
+     aspen.stimuli.continuity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.stimuli.identity.html">
+     aspen.stimuli.identity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.stimuli.iterated_rippled_noise.html">
+     aspen.stimuli.iterated_rippled_noise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.stimuli.locally_time_reversed_speech.html">
+     aspen.stimuli.locally_time_reversed_speech
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.stimuli.modulation_filtered_speech.html">
+     aspen.stimuli.modulation_filtered_speech
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.stimuli.noise_vocoded_speech.html">
+     aspen.stimuli.noise_vocoded_speech
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.stimuli.verbal_transformation.html">
+     aspen.stimuli.verbal_transformation
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="aspen.processings.html">
+   aspen.processings
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.processings.amplitude_maximize.html">
+     aspen.processings.amplitude_maximize
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.processings.apply_ramp.html">
+     aspen.processings.apply_ramp
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.processings.declip.html">
+     aspen.processings.declip
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.processings.extract_envelope.html">
+     aspen.processings.extract_envelope
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.processings.filter_signal.html">
+     aspen.processings.filter_signal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.processings.modulation_power_spectrum.html">
+     aspen.processings.modulation_power_spectrum
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.processings.normalize.html">
+     aspen.processings.normalize
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="aspen.visualizations.html">
+   aspen.visualizations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.visualizations.mps_visualizer.html">
+     aspen.visualizations.mps_visualizer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.visualizations.spectrogram_visualizer.html">
+     aspen.visualizations.spectrogram_visualizer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.visualizations.spectrum_visualizer.html">
+     aspen.visualizations.spectrum_visualizer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.visualizations.waveform_visualizer.html">
+     aspen.visualizations.waveform_visualizer
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="aspen.interfaces.html">
+   aspen.interfaces
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.interfaces.abs_common_interface.html">
+     aspen.interfaces.abs_common_interface
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     aspen.interfaces.abs_processing_interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.interfaces.abs_sound_interface.html">
+     aspen.interfaces.abs_sound_interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.interfaces.abs_stimulus_interface.html">
+     aspen.interfaces.abs_stimulus_interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="aspen.interfaces.abs_visualization_interface.html">
+     aspen.interfaces.abs_visualization_interface
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="module-aspen.interfaces.abs_processing_interface">
+<span id="aspen-interfaces-abs-processing-interface"></span><h1>aspen.interfaces.abs_processing_interface<a class="headerlink" href="#module-aspen.interfaces.abs_processing_interface" title="Permalink to this headline">¶</a></h1>
+<p>Abstract processing interface</p>
+<p class="rubric">Classes</p>
+<table class="longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#aspen.interfaces.abs_processing_interface.AbsProcessingInterface" title="aspen.interfaces.abs_processing_interface.AbsProcessingInterface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">AbsProcessingInterface</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt id="aspen.interfaces.abs_processing_interface.AbsProcessingInterface">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">aspen.interfaces.abs_processing_interface.</span></code><code class="sig-name descname"><span class="pre">AbsProcessingInterface</span></code><a class="reference internal" href="../_modules/aspen/interfaces/abs_processing_interface.html#AbsProcessingInterface"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aspen.interfaces.abs_processing_interface.AbsProcessingInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/abc.html#abc.ABC" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">abc.ABC</span></code></a></p>
+<dl class="py method">
+<dt id="aspen.interfaces.abs_processing_interface.AbsProcessingInterface.__call__">
+<em class="property"><span class="pre">abstract</span> </em><code class="sig-name descname"><span class="pre">__call__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aspen/interfaces/abs_processing_interface.html#AbsProcessingInterface.__call__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aspen.interfaces.abs_processing_interface.AbsProcessingInterface.__call__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transform input multiple signals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><span class="target" id="aspen.interfaces.abs_processing_interface.AbsProcessingInterface.__call__.params.x"></span><strong>x</strong><a class="paramlink headerlink reference internal" href="#aspen.interfaces.abs_processing_interface.AbsProcessingInterface.__call__.params.x">¶</a> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a>) – Signals (<cite>np.ndarray</cite>).</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.21)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></a></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Output signal.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="aspen.interfaces.abs_common_interface.html" title="previous page">aspen.interfaces.abs_common_interface</a>
+    <a class='right-next' id="next-link" href="aspen.interfaces.abs_sound_interface.html" title="next page">aspen.interfaces.abs_sound_interface</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Takanori Ashihara.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

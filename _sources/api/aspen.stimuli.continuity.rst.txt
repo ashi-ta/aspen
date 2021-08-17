@@ -1,0 +1,29 @@
+aspen.stimuli.continuity
+========================
+
+.. automodule:: aspen.stimuli.continuity
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Continuity
+   
+   
+
+   
+   
+   
+
+
+

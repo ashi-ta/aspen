@@ -1,0 +1,29 @@
+aspen.visualizations.waveform\_visualizer
+=========================================
+
+.. automodule:: aspen.visualizations.waveform_visualizer
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      WaveformVisualizer
+   
+   
+
+   
+   
+   
+
+
+

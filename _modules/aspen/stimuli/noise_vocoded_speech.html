@@ -1,0 +1,522 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aspen.stimuli.noise_vocoded_speech &#8212; ASPEN  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx_paramlinks.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/katex-math.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+    <script src="../../../_static/katex_autorenderer.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../index.html">
+<p class="title">ASPEN</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../getting_started.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../configuration.html">
+  Customize Output
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../visualization.html">
+  Visualization
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api_references.html">
+  API References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <h1>Source code for aspen.stimuli.noise_vocoded_speech</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># encoding: utf-8</span>
+<span class="sd">&quot;&quot;&quot;Noise-vocoded speech&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Sequence</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">aspen.interfaces.abs_common_interface</span> <span class="kn">import</span> <span class="n">AbsCommonInterface</span>
+<span class="kn">from</span> <span class="nn">aspen.interfaces.abs_stimulus_interface</span> <span class="kn">import</span> <span class="n">AbsStimulusInterface</span>
+<span class="kn">from</span> <span class="nn">aspen.processings.extract_envelope</span> <span class="kn">import</span> <span class="n">extract_envelope</span>
+<span class="kn">from</span> <span class="nn">aspen.processings.filter_signal</span> <span class="kn">import</span> <span class="n">filter_signal</span>
+<span class="kn">from</span> <span class="nn">aspen.utils.freqband</span> <span class="kn">import</span> <span class="n">erb_band</span><span class="p">,</span> <span class="n">octave_band</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="NoiseVocodedSpeech"><a class="viewcode-back" href="../../../api/aspen.stimuli.noise_vocoded_speech.html#aspen.stimuli.noise_vocoded_speech.NoiseVocodedSpeech">[docs]</a><span class="k">class</span> <span class="nc">NoiseVocodedSpeech</span><span class="p">(</span><span class="n">AbsCommonInterface</span><span class="p">,</span> <span class="n">AbsStimulusInterface</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generate nosie-vocoded speech.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        samp_freq: Sampling frequency. Defaults to 16000.</span>
+<span class="sd">        num_freqband: Number of frequency band. Defaults to 4.</span>
+<span class="sd">        freqband_scale_method: Scale of frequency band.</span>
+<span class="sd">            The choices are `octave`, `erb` and `user`. Defaults to &quot;octave&quot;.</span>
+<span class="sd">        user_freqband: User defiened frequency band scale.</span>
+<span class="sd">            Use only when freqband_scale_method is `user`. Defaults to &quot;0_600_1500_2100_4000&quot;.</span>
+<span class="sd">        freqband_limit: Lower &amp; upper frequency of bandpass.</span>
+<span class="sd">            Use only when freqband_scale_method is `octave` or `erb`. Defaults to &quot;500_8000&quot;.</span>
+<span class="sd">        erb_band_number_limit: Lower &amp; upper bandlimit number in ERB scale.</span>
+<span class="sd">            Use only when freqband_scale_method is `erb`. Defaults to &quot;3_35&quot;.</span>
+<span class="sd">        erb_band_number_step: Step number in ERB scale to reduce the ERB.</span>
+<span class="sd">            Use only when freqband_scale_method `erb`. Defaults to 1.</span>
+<span class="sd">        filter_impulse_response_method: Type of impulse response for filtering. Defaults to &quot;fir&quot;.</span>
+<span class="sd">        filter_order: Number of the filter order. Defaults to 512.</span>
+<span class="sd">        filter_fir_window: Type of FIR window for filtering.</span>
+<span class="sd">            Window function is listed in Scipy doc (https://docs.scipy.org/doc/scipy/reference/signal.windows.html).</span>
+<span class="sd">            Defaults to &quot;hann&quot;.</span>
+<span class="sd">        ext_env_method: Method of envelope extraction.</span>
+<span class="sd">            `hilbert` is (hilbert transform + low-pass filter).</span>
+<span class="sd">            `rect` is (half-wave rectification + low-pass filter). Defaults to &quot;rect&quot;.</span>
+<span class="sd">        ext_env_impulse_response_method: Type of impulse response for extracting envelope.</span>
+<span class="sd">            Defaults to &quot;fir&quot;.</span>
+<span class="sd">        ext_env_filter_order: Number of the filter order for extracting envelope. Defaults to 512.</span>
+<span class="sd">        ext_env_fir_window: Type of FIR window for extracting envelope.</span>
+<span class="sd">            Window function is listed in Scipy doc (https://docs.scipy.org/doc/scipy/reference/signal.windows.html).&quot;,</span>
+<span class="sd">            Defaults to &quot;hann&quot;.</span>
+<span class="sd">        ext_env_freq: Frequency of the lowpass filter for extracting envelope. Defaults to 16.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">samp_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16000</span><span class="p">,</span>
+        <span class="n">num_freqband</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="n">freqband_scale_method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;octave&quot;</span><span class="p">,</span>
+        <span class="n">user_freqband</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;0_600_1500_2100_4000&quot;</span><span class="p">,</span>
+        <span class="n">freqband_limit</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;500_8000&quot;</span><span class="p">,</span>
+        <span class="n">erb_band_number_limit</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;3_35&quot;</span><span class="p">,</span>
+        <span class="n">erb_band_number_step</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">filter_impulse_response_method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;fir&quot;</span><span class="p">,</span>
+        <span class="n">filter_order</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span>
+        <span class="n">filter_fir_window</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span>
+        <span class="n">ext_env_method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;rect&quot;</span><span class="p">,</span>
+        <span class="n">ext_env_impulse_response_method</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;fir&quot;</span><span class="p">,</span>
+        <span class="n">ext_env_filter_order</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">512</span><span class="p">,</span>
+        <span class="n">ext_env_fir_window</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;hann&quot;</span><span class="p">,</span>
+        <span class="n">ext_env_freq</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">16</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">=</span> <span class="n">samp_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_freqband</span> <span class="o">=</span> <span class="n">num_freqband</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freqband_scale_method</span> <span class="o">=</span> <span class="n">freqband_scale_method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_freqband</span> <span class="o">=</span> <span class="n">user_freqband</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">freqband_limit</span> <span class="o">=</span> <span class="n">freqband_limit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">erb_band_number_limit</span> <span class="o">=</span> <span class="n">erb_band_number_limit</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">erb_band_number_step</span> <span class="o">=</span> <span class="n">erb_band_number_step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filter_impulse_response_method</span> <span class="o">=</span> <span class="n">filter_impulse_response_method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filter_order</span> <span class="o">=</span> <span class="n">filter_order</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">filter_fir_window</span> <span class="o">=</span> <span class="n">filter_fir_window</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_method</span> <span class="o">=</span> <span class="n">ext_env_method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_impulse_response_method</span> <span class="o">=</span> <span class="n">ext_env_impulse_response_method</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_filter_order</span> <span class="o">=</span> <span class="n">ext_env_filter_order</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_fir_window</span> <span class="o">=</span> <span class="n">ext_env_fir_window</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_freq</span> <span class="o">=</span> <span class="n">ext_env_freq</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">_configure_frequency_band</span><span class="p">()</span>
+
+<div class="viewcode-block" id="NoiseVocodedSpeech.add_arguments"><a class="viewcode-back" href="../../../api/aspen.stimuli.noise_vocoded_speech.html#aspen.stimuli.noise_vocoded_speech.NoiseVocodedSpeech.add_arguments">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">add_arguments</span><span class="p">(</span><span class="n">parser</span><span class="p">):</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">add_argument_group</span><span class="p">(</span><span class="s2">&quot;Noise-vocoded speech setting&quot;</span><span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--num-freqband&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of frequency band&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--freqband-scale-method&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;octave&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;octave&quot;</span><span class="p">,</span> <span class="s2">&quot;erb&quot;</span><span class="p">,</span> <span class="s2">&quot;user&quot;</span><span class="p">],</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Scale of frequency band&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--user-freqband&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;0_600_1500_2100_4000&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;User defiened frequency band scale.&quot;</span>
+            <span class="s2">&quot;Use only when --freqband-scale-method=user&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--freqband-limit&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;500_8000&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Lower &amp; upper frequency of bandpass.&quot;</span>
+            <span class="s2">&quot;Use only when --freqband-scale-method={octave|erb}&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--erb-band-number-limit&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;3_35&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Lower &amp; upper bandlimit number in ERB scale.&quot;</span>
+            <span class="s2">&quot;Use only when --freqband-scale-method=erb&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--erb-band-number-step&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Step number in ERB scale (use when ERB scale is too detailed).&quot;</span>
+            <span class="s2">&quot;Use only when --freqband-scale-method=erb&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--filter-impulse-response-method&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;fir&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fir&quot;</span><span class="p">,</span> <span class="s2">&quot;iir&quot;</span><span class="p">],</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Type of impulse response for filtering noise&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--filter-order&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of the filter order&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--filter-fir-window&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;hann&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Type of FIR window for filtering noise.&quot;</span>
+            <span class="s2">&quot;Window function is listed in Scipy doc (https://docs.scipy.org/doc/scipy/reference/signal.windows.html).&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--ext-env-method&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;rect&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;rect&quot;</span><span class="p">,</span> <span class="s2">&quot;hilbert&quot;</span><span class="p">],</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Method of envelope extraction&quot;</span>
+            <span class="s2">&quot;rect = half-wave rectification + low-pass filter&quot;</span>
+            <span class="s2">&quot;hilbert = hilbert transform + low-pass filter&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--ext-env-impulse-response-method&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;fir&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fir&quot;</span><span class="p">,</span> <span class="s2">&quot;iir&quot;</span><span class="p">],</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Impulse response for the envelope extraction&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--ext-env-filter-order&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Order of the filter for the envelope extraction&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--ext-env-fir-window&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;hann&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Kind of the window function for the envelope extraction&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--ext-env-freq&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Frequency of the lowpass filter for the envelope extraction&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">parser</span></div>
+
+<div class="viewcode-block" id="NoiseVocodedSpeech.__call__"><a class="viewcode-back" href="../../../api/aspen.stimuli.noise_vocoded_speech.html#aspen.stimuli.noise_vocoded_speech.NoiseVocodedSpeech.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Generate noise-vocoded speech.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x: Speech signal and noise signal.</span>
+<span class="sd">                x must be sequence-like object such as list, tuple and so on.</span>
+<span class="sd">                The first element is speech signal and the second one is noise (i.e. [speech, noise]).</span>
+<span class="sd">                The duration of noise must be equal to or greater than the one of speech signal.</span>
+<span class="sd">                In the case of `gap_method=silent`, the second element is ignored.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Noise-vocoded speech.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;x must contain the 2 elements which is comprised by [speech, noise]&quot;</span>
+            <span class="p">)</span>
+        <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;noise must be equal to or greater than the one of speech signal&quot;</span>
+            <span class="p">)</span>
+        <span class="n">noise</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">stimulus</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">stimulus</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="n">band_signals</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">band</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">bands</span><span class="p">):</span>
+            <span class="n">x_cloned</span> <span class="o">=</span> <span class="n">stimulus</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">n_cloned</span> <span class="o">=</span> <span class="n">noise</span><span class="o">.</span><span class="n">copy</span><span class="p">()[:</span><span class="n">t</span><span class="p">]</span>
+            <span class="c1"># bandpass speech</span>
+            <span class="k">if</span> <span class="n">band</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">band</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># do nothing when freq_band=[0, nyquist_freq]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">band</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">btype</span> <span class="o">=</span> <span class="s2">&quot;lowpass&quot;</span>
+                    <span class="n">freq_array</span> <span class="o">=</span> <span class="n">band</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="k">elif</span> <span class="n">band</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">band</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                            <span class="s2">&quot;Invalid bandwidth = (&quot;</span>
+                            <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">band</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+                            <span class="o">+</span> <span class="s2">&quot;, &quot;</span>
+                            <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">band</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+                            <span class="o">+</span> <span class="s2">&quot;).&quot;</span>
+                        <span class="p">)</span>
+                    <span class="n">btype</span> <span class="o">=</span> <span class="s2">&quot;highpass&quot;</span>
+                    <span class="n">freq_array</span> <span class="o">=</span> <span class="n">band</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">btype</span> <span class="o">=</span> <span class="s2">&quot;bandpass&quot;</span>
+                    <span class="n">freq_array</span> <span class="o">=</span> <span class="n">band</span>
+                <span class="n">x_cloned</span> <span class="o">=</span> <span class="n">filter_signal</span><span class="p">(</span>
+                    <span class="n">x_cloned</span><span class="p">,</span>
+                    <span class="n">btype</span><span class="p">,</span>
+                    <span class="n">freq_array</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">filter_impulse_response_method</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">filter_order</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">filter_fir_window</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="n">n_cloned</span> <span class="o">=</span> <span class="n">filter_signal</span><span class="p">(</span>
+                    <span class="n">n_cloned</span><span class="p">,</span>
+                    <span class="n">btype</span><span class="p">,</span>
+                    <span class="n">freq_array</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">filter_impulse_response_method</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">filter_order</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">filter_fir_window</span><span class="p">,</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span><span class="p">,</span>
+                <span class="p">)</span>
+            <span class="n">env</span> <span class="o">=</span> <span class="n">extract_envelope</span><span class="p">(</span>
+                <span class="n">x_cloned</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_method</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_freq</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_impulse_response_method</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_filter_order</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">ext_env_fir_window</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">band_signals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">env</span> <span class="o">*</span> <span class="n">n_cloned</span><span class="p">)</span>
+
+        <span class="c1"># sum the above all signals</span>
+        <span class="n">stimulus</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">band_signals</span><span class="p">:</span>
+            <span class="n">stimulus</span> <span class="o">+=</span> <span class="n">s</span>
+
+        <span class="k">return</span> <span class="n">stimulus</span></div>
+
+<div class="viewcode-block" id="NoiseVocodedSpeech._configure_frequency_band"><a class="viewcode-back" href="../../../api/aspen.stimuli.noise_vocoded_speech.html#aspen.stimuli.noise_vocoded_speech.NoiseVocodedSpeech._configure_frequency_band">[docs]</a>    <span class="k">def</span> <span class="nf">_configure_frequency_band</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Generate frequency band configuration&quot;&quot;&quot;</span>
+
+        <span class="n">freqband_limit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freqband_limit</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">freqband_scale_method</span> <span class="o">==</span> <span class="s2">&quot;octave&quot;</span><span class="p">:</span>
+            <span class="n">octband</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">octave_band</span><span class="p">(</span>
+                <span class="n">freqband_limit</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">freqband_limit</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span>
+            <span class="p">)</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">octband</span><span class="p">])</span>  <span class="c1"># band start with 0Hz</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">freqband_scale_method</span> <span class="o">==</span> <span class="s2">&quot;erb&quot;</span><span class="p">:</span>
+            <span class="n">erb_band_number_limit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">erb_band_number_limit</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span>
+            <span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">)</span>
+            <span class="n">erbband</span> <span class="o">=</span> <span class="n">erb_band</span><span class="p">(</span>
+                <span class="n">erb_band_number_limit</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">erb_band_number_limit</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="n">freqband_limit</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">freqband_limit</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="n">erbband</span><span class="p">[::</span> <span class="bp">self</span><span class="o">.</span><span class="n">erb_band_number_step</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">freqband_scale_method</span> <span class="o">==</span> <span class="s2">&quot;user&quot;</span><span class="p">:</span>
+            <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user_freqband</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_freqband</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;num_freqband=</span><span class="si">{}</span><span class="s2"> must be smaller than the number of bands=</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">num_freqband</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+
+        <span class="c1"># divisions of frequency band</span>
+        <span class="c1"># e.g. lower_freq=500, upper_freq=8000</span>
+        <span class="c1">#      num_freqband=1: bands=[[0, 4000]]</span>
+        <span class="c1">#      num_freqband=2: bands=[[0, 500], [500, 4000]]</span>
+        <span class="c1">#      num_freqband=3: bands=[[0, 500], [500, 1000], [1000, 4000]]</span>
+        <span class="c1">#      num_freqband=4: bands=[[0, 500], [500, 1000], [1000, 2000], [2000, 4000]]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bands</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_freqband</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">bands</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_freqband</span><span class="p">):</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_freqband</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">bands</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">b</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">bands</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">b</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+            <span class="s2">&quot;Frequency band = &quot;</span>
+            <span class="o">+</span> <span class="s2">&quot;, &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">bands</span><span class="p">])</span>
+        <span class="p">)</span></div></div>
+</pre></div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Takanori Ashihara.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

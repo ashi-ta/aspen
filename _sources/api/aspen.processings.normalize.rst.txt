@@ -1,0 +1,35 @@
+aspen.processings.normalize
+===========================
+
+.. automodule:: aspen.processings.normalize
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      normalize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Normalize
+   
+   
+
+   
+   
+   
+
+
+

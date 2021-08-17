@@ -1,0 +1,35 @@
+aspen.processings.declip
+========================
+
+.. automodule:: aspen.processings.declip
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      declip
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Declip
+   
+   
+
+   
+   
+   
+
+
+

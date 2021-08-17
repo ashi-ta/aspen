@@ -1,0 +1,35 @@
+aspen.processings.amplitude\_maximize
+=====================================
+
+.. automodule:: aspen.processings.amplitude_maximize
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      amplitude_maximize
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AmplitudeMaximize
+   
+   
+
+   
+   
+   
+
+
+

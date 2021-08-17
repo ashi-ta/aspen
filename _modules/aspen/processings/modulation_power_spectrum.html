@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aspen.processings.modulation_power_spectrum &#8212; ASPEN  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx_paramlinks.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/katex-math.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+    <script src="../../../_static/katex_autorenderer.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../index.html">
+<p class="title">ASPEN</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../getting_started.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../configuration.html">
+  Customize Output
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../visualization.html">
+  Visualization
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api_references.html">
+  API References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <h1>Source code for aspen.processings.modulation_power_spectrum</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># encoding: utf-8</span>
+<span class="sd">&quot;&quot;&quot;Calculate a modulation power spectrum&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="kn">import</span> <span class="nn">librosa</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">fft</span><span class="p">,</span> <span class="n">signal</span>
+
+<span class="kn">from</span> <span class="nn">aspen.interfaces.abs_common_interface</span> <span class="kn">import</span> <span class="n">AbsCommonInterface</span>
+<span class="kn">from</span> <span class="nn">aspen.interfaces.abs_processing_interface</span> <span class="kn">import</span> <span class="n">AbsProcessingInterface</span>
+<span class="kn">from</span> <span class="nn">aspen.processings.normalize</span> <span class="kn">import</span> <span class="n">normalize</span>
+<span class="kn">from</span> <span class="nn">aspen.utils.cli_utils</span> <span class="kn">import</span> <span class="n">strtobool</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="n">EPSILON</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>
+
+
+<div class="viewcode-block" id="ModulationPowerSpectrum"><a class="viewcode-back" href="../../../api/aspen.processings.modulation_power_spectrum.html#aspen.processings.modulation_power_spectrum.ModulationPowerSpectrum">[docs]</a><span class="k">class</span> <span class="nc">ModulationPowerSpectrum</span><span class="p">(</span><span class="n">AbsCommonInterface</span><span class="p">,</span> <span class="n">AbsProcessingInterface</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Modulation Power Spectrum.</span>
+
+<span class="sd">    This class is heavily inspired by soundsig (https://github.com/theunissenlab/soundsig).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        modulation_power_spectrum_spec_samp_freq: Sampling frequency in spectrogram space.</span>
+<span class="sd">            Defaults to 1000.</span>
+<span class="sd">        modulation_power_spectrum_gauss_window_alpha: The parameter to generate Gaussian window.</span>
+<span class="sd">            The detail is shown in MATLAB gaussian window method</span>
+<span class="sd">            (https://www.mathworks.com/help/signal/ref/gausswin.html). Defaults to 3.</span>
+<span class="sd">        modulation_power_spectrum_spacing_freq: The time-frequency scale for the spectrogram in Hz.</span>
+<span class="sd">            This variable determines the width of the gaussian window to calculate the SFTF. Defaults to 50.</span>
+<span class="sd">        modulation_power_spectrum_lower_freq: Lower frequency in the spectrogram to save space.</span>
+<span class="sd">            Defaults to 0.</span>
+<span class="sd">        modulation_power_spectrum_upper_freq:</span>
+<span class="sd">            Upper frequency in the spectrogram to save space. Upper limit is the half of sampling_frequency.</span>
+<span class="sd">            Defaults to 8000.</span>
+<span class="sd">        modulation_power_spectrum_spec_normalize:</span>
+<span class="sd">            The flag of normalizing spectrogram resulted from STFT. Defaults to True.</span>
+<span class="sd">        modulation_power_spectrum_spec_db_range:</span>
+<span class="sd">            The range to narrow down the spectrogram amplitude for making it easier to visualize. Defaults to 50.</span>
+<span class="sd">        modulation_power_spectrum_fft2_win_duration:</span>
+<span class="sd">            The duration of gaussian window for 2D-FFT in millisecond.</span>
+<span class="sd">            If the value is 0, fft2 is executed withoud window-shifting. Defaults to 100.</span>
+<span class="sd">        modulation_power_spectrum_fft2_win_shift:</span>
+<span class="sd">            The number of points to shift segments for 2D-FFT.</span>
+<span class="sd">            Defaults is 0 that means `(wduration - 1) // 6` (wduration is fft2_win_duration in sample).</span>
+<span class="sd">        modulation_power_spectrum_backend: The library to calculate STFT.</span>
+<span class="sd">            The choices are &quot;librosa&quot; or &quot;scipy&quot;. Defaults to &quot;librosa&quot;.</span>
+<span class="sd">        samp_freq: Sampling frequency. Defaults to 16000.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_spec_samp_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_gauss_window_alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_spacing_freq</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_lower_freq</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_upper_freq</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_spec_normalize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_spec_db_range</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_fft2_win_duration</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_fft2_win_shift</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="n">modulation_power_spectrum_backend</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;librosa&quot;</span><span class="p">,</span>
+        <span class="n">samp_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16000</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spec_samp_freq</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_spec_samp_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauss_window_alpha</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_gauss_window_alpha</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spacing_freq</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_spacing_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lower_freq</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_lower_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">upper_freq</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_upper_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spec_normalize</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_spec_normalize</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spec_db_range</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_spec_db_range</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fft2_win_duration</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_fft2_win_duration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fft2_win_shift</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_fft2_win_shift</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">backend</span> <span class="o">=</span> <span class="n">modulation_power_spectrum_backend</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">=</span> <span class="n">samp_freq</span>
+
+<div class="viewcode-block" id="ModulationPowerSpectrum.add_arguments"><a class="viewcode-back" href="../../../api/aspen.processings.modulation_power_spectrum.html#aspen.processings.modulation_power_spectrum.ModulationPowerSpectrum.add_arguments">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">add_arguments</span><span class="p">(</span><span class="n">parser</span><span class="p">):</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">add_argument_group</span><span class="p">(</span><span class="s2">&quot;modulation-powre-spectrum setting&quot;</span><span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-spec-samp-freq&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Duration of ramp in millisecond&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-gauss-window-alpha&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Window function of ramp&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-spacing-freq&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Position of ramp&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-lower-freq&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Position of ramp&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-upper-freq&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Position of ramp&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-spec-normalize&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">strtobool</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Position of ramp&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-spec-db-range&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Position of ramp&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-fft2-win-duration&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Position of ramp&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-fft2-win-shift&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Position of ramp&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--modulation-power-spectrum-backend&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;librosa&quot;</span><span class="p">,</span>
+            <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;librosa&quot;</span><span class="p">,</span> <span class="s2">&quot;scipy&quot;</span><span class="p">],</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Position of ramp&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">parser</span></div>
+
+<div class="viewcode-block" id="ModulationPowerSpectrum.__call__"><a class="viewcode-back" href="../../../api/aspen.processings.modulation_power_spectrum.html#aspen.processings.modulation_power_spectrum.ModulationPowerSpectrum.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Calculate modulation power spectrum</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x: Input signal</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Return the modulation power spectrum.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_freq</span> <span class="o">&gt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s2">&quot;upper_freq must be the Nyquist frequency (the half of sampling frequency)&quot;</span>
+            <span class="p">)</span>
+        <span class="c1"># duration of window is in proportion to the std and</span>
+        <span class="c1"># in inverse proportion to the frequency resoluton of spectrogram</span>
+        <span class="n">wduration</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span>
+            <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauss_window_alpha</span><span class="p">)</span>
+            <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">spacing_freq</span><span class="p">)</span>
+            <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span>
+        <span class="p">)</span>
+        <span class="n">wduration</span> <span class="o">=</span> <span class="n">wduration</span> <span class="o">+</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">wduration</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">wduration</span>
+        <span class="c1"># so that the window shape is invariant with respect to window duration</span>
+        <span class="n">win_std</span> <span class="o">=</span> <span class="n">wduration</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauss_window_alpha</span><span class="p">)</span>
+        <span class="n">win_shift</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">spec_samp_freq</span><span class="p">))</span>
+        <span class="n">window</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;gaussian&quot;</span><span class="p">,</span> <span class="n">win_std</span><span class="p">)</span>
+        <span class="c1"># calculate the spectrogram with gaussian window</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;librosa&quot;</span><span class="p">:</span>
+            <span class="n">spec</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">stft</span><span class="p">(</span>
+                <span class="n">x</span><span class="p">,</span>
+                <span class="n">n_fft</span><span class="o">=</span><span class="n">wduration</span><span class="p">,</span>
+                <span class="n">hop_length</span><span class="o">=</span><span class="n">win_shift</span><span class="p">,</span>
+                <span class="n">win_length</span><span class="o">=</span><span class="n">wduration</span><span class="p">,</span>
+                <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">,</span>
+                <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">pad_mode</span><span class="o">=</span><span class="s2">&quot;constant&quot;</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">spec_f</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">fft_frequencies</span><span class="p">(</span><span class="n">sr</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span><span class="p">,</span> <span class="n">n_fft</span><span class="o">=</span><span class="n">wduration</span><span class="p">)</span>
+            <span class="n">spec_t</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">frames_to_time</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">spec</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> <span class="n">sr</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span><span class="p">,</span> <span class="n">hop_length</span><span class="o">=</span><span class="n">win_shift</span>
+            <span class="p">)</span>
+            <span class="n">stft_param</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;n_fft&quot;</span><span class="p">:</span> <span class="n">wduration</span><span class="p">,</span> <span class="s2">&quot;hop_length&quot;</span><span class="p">:</span> <span class="n">win_shift</span><span class="p">,</span> <span class="s2">&quot;window&quot;</span><span class="p">:</span> <span class="n">window</span><span class="p">}</span>
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">backend</span> <span class="o">==</span> <span class="s2">&quot;scipy&quot;</span><span class="p">:</span>
+            <span class="n">noverlap</span> <span class="o">=</span> <span class="n">wduration</span> <span class="o">-</span> <span class="n">win_shift</span>
+            <span class="n">spec_f</span><span class="p">,</span> <span class="n">spec_t</span><span class="p">,</span> <span class="n">spec</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">stft</span><span class="p">(</span>
+                <span class="n">x</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span><span class="p">,</span>
+                <span class="n">window</span><span class="o">=</span><span class="n">window</span><span class="p">,</span>
+                <span class="n">nperseg</span><span class="o">=</span><span class="n">wduration</span><span class="p">,</span>
+                <span class="n">noverlap</span><span class="o">=</span><span class="n">noverlap</span><span class="p">,</span>
+                <span class="n">detrend</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">return_onesided</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">boundary</span><span class="o">=</span><span class="s2">&quot;zeros&quot;</span><span class="p">,</span>
+                <span class="n">padded</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">stft_param</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;window&quot;</span><span class="p">:</span> <span class="n">window</span><span class="p">,</span> <span class="s2">&quot;nperseg&quot;</span><span class="p">:</span> <span class="n">wduration</span><span class="p">,</span> <span class="s2">&quot;noverlap&quot;</span><span class="p">:</span> <span class="n">noverlap</span><span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid backend&quot;</span><span class="p">)</span>
+        <span class="n">spec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span>
+            <span class="n">spec</span><span class="p">[(</span><span class="n">spec_f</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lower_freq</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">spec_f</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">upper_freq</span><span class="p">),</span> <span class="p">:]</span>
+        <span class="p">)</span>
+        <span class="c1"># avoid to be divided by zero</span>
+        <span class="n">spec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">spec</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="n">EPSILON</span><span class="p">,</span> <span class="n">spec</span><span class="p">)</span>
+        <span class="n">spec</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>  <span class="c1"># log (dB) scale</span>
+        <span class="n">spec_f_size</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">spec_t_size</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+        <span class="c1"># rescale the processing range of the amplitude</span>
+        <span class="c1"># within lower_amp and spec.max (spec.max - lower_amp = spec_db_range) and normalize</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spec_db_range</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">lower_amp</span> <span class="o">=</span> <span class="n">spec</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">spec_db_range</span>
+            <span class="n">spec</span><span class="p">[</span><span class="n">spec</span> <span class="o">&lt;</span> <span class="n">lower_amp</span><span class="p">]</span> <span class="o">=</span> <span class="n">lower_amp</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">spec_normalize</span><span class="p">:</span>
+            <span class="n">spec</span> <span class="o">=</span> <span class="n">normalize</span><span class="p">(</span><span class="n">spec</span><span class="p">,</span> <span class="s2">&quot;zscore&quot;</span><span class="p">)</span>
+
+        <span class="c1"># fft2 w/o window-shifting</span>
+        <span class="c1"># is easy to calculate the inverse 2D-FFT so that generate modulation filtering signal</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fft2_win_duration</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;2D-FFT is executed without window shifting&quot;</span><span class="p">)</span>
+            <span class="n">mps</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fft2</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+            <span class="n">mps_pow</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">mps</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span>
+            <span class="n">mps_f</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span>
+                <span class="n">spec_f_size</span><span class="p">,</span> <span class="n">spec_f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">spec_f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="p">)</span>  <span class="c1"># d is the sample spacing</span>
+            <span class="n">mps_t</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span>
+                <span class="n">spec_t_size</span><span class="p">,</span> <span class="n">spec_t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">spec_t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="p">)</span>  <span class="c1"># d is the sample spacing</span>
+
+        <span class="c1"># fft2 w/ window-shifting (like a 2D-STFT)</span>
+        <span class="c1"># can deal with the distinction between positive and negative temporal modulated frequency</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;2D-FFT is executed with window shifting&quot;</span><span class="p">)</span>
+            <span class="c1"># find the number of samples which can be include the size of window from spectrogram segment time</span>
+            <span class="n">wduration</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">spec_t</span> <span class="o">&gt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fft2_win_duration</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+            <span class="n">wduration</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">wduration</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">wduration</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">wduration</span><span class="p">)</span>
+            <span class="n">half_wduration</span> <span class="o">=</span> <span class="p">(</span><span class="n">wduration</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+            <span class="n">win_std</span> <span class="o">=</span> <span class="n">wduration</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">gauss_window_alpha</span><span class="p">)</span>
+            <span class="c1"># signal.windows.gaussian is not multiplied by coefficient in comparison with the reference below.</span>
+            <span class="c1"># https://github.com/theunissenlab/soundsig/blob/8efaa51f548689ed30370597e37c736a66a61e2a/soundsig/signal.py#L189</span>
+            <span class="c1"># the multiplied coefficient (1/(sigma*sqrt(2*pi))) is required for a probability density distribution,</span>
+            <span class="c1"># not for a window</span>
+            <span class="n">window</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">windows</span><span class="o">.</span><span class="n">gaussian</span><span class="p">(</span><span class="n">wduration</span><span class="p">,</span> <span class="n">win_std</span><span class="p">)</span>
+            <span class="n">window</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="n">window</span><span class="p">,</span> <span class="p">[</span><span class="n">spec_f_size</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fft2_win_shift</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">fft2_win_shift</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">wduration</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">//</span> <span class="mi">6</span><span class="p">)</span>
+            <span class="c1"># pad with minimum value at the beggining and end of the spectrogram</span>
+            <span class="n">padded_spec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span>
+                <span class="n">spec</span><span class="p">,</span>
+                <span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="n">half_wduration</span><span class="p">]],</span>
+                <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;constant&quot;</span><span class="p">,</span>
+                <span class="n">constant_values</span><span class="o">=</span><span class="n">spec</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+            <span class="p">)</span>
+            <span class="c1"># padded_spec = np.ones([spec_f_size, half_wduration]) * spec.min()</span>
+            <span class="c1"># padded_spec = np.concatenate([padded_spec, spec, padded_spec], axis=1)</span>
+
+            <span class="n">fft2_step</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span>
+                <span class="nb">range</span><span class="p">(</span><span class="n">half_wduration</span><span class="p">,</span> <span class="n">spec_t_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fft2_win_shift</span><span class="p">)</span>
+            <span class="p">)</span>
+            <span class="n">mps</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="n">mps_pow</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">spec_f_size</span><span class="p">,</span> <span class="n">wduration</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">wcenter</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fft2_step</span><span class="p">):</span>
+                <span class="n">cloned</span> <span class="o">=</span> <span class="n">padded_spec</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="n">wonset</span> <span class="o">=</span> <span class="n">wcenter</span> <span class="o">-</span> <span class="n">half_wduration</span>
+                <span class="n">woffset</span> <span class="o">=</span> <span class="n">wcenter</span> <span class="o">+</span> <span class="n">half_wduration</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="n">cloned</span> <span class="o">=</span> <span class="n">cloned</span><span class="p">[:,</span> <span class="n">wonset</span><span class="p">:</span><span class="n">woffset</span><span class="p">]</span> <span class="o">*</span> <span class="n">window</span>
+                <span class="n">mps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fft</span><span class="o">.</span><span class="n">fft2</span><span class="p">(</span><span class="n">cloned</span><span class="p">))</span>
+                <span class="n">mps_pow</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">mps</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span>
+
+            <span class="n">mps_pow</span> <span class="o">/=</span> <span class="nb">len</span><span class="p">(</span><span class="n">fft2_step</span><span class="p">)</span>
+            <span class="n">mps_f</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span>
+                <span class="n">spec_f_size</span><span class="p">,</span> <span class="n">spec_f</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">spec_f</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="p">)</span>  <span class="c1"># d is the sample spacing</span>
+            <span class="n">mps_t</span> <span class="o">=</span> <span class="n">fft</span><span class="o">.</span><span class="n">fftfreq</span><span class="p">(</span>
+                <span class="n">wduration</span><span class="p">,</span> <span class="n">spec_t</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">spec_t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="p">)</span>  <span class="c1"># d is the sample spacing</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">stft_param</span> <span class="o">=</span> <span class="n">stft_param</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mps_f</span> <span class="o">=</span> <span class="n">mps_f</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mps_t</span> <span class="o">=</span> <span class="n">mps_t</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mps</span> <span class="o">=</span> <span class="n">mps</span>
+
+        <span class="k">return</span> <span class="n">mps_pow</span></div>
+
+<div class="viewcode-block" id="ModulationPowerSpectrum.stft_parameters"><a class="viewcode-back" href="../../../api/aspen.processings.modulation_power_spectrum.html#aspen.processings.modulation_power_spectrum.ModulationPowerSpectrum.stft_parameters">[docs]</a>    <span class="k">def</span> <span class="nf">stft_parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return the pameters for short-time Fourier transform.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            the pameters for short-time Fourier transform.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;stft_param&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s2">&quot;should run class method of __call__ first.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stft_param</span></div>
+
+<div class="viewcode-block" id="ModulationPowerSpectrum.spectral_modulation_freq"><a class="viewcode-back" href="../../../api/aspen.processings.modulation_power_spectrum.html#aspen.processings.modulation_power_spectrum.ModulationPowerSpectrum.spectral_modulation_freq">[docs]</a>    <span class="k">def</span> <span class="nf">spectral_modulation_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return the modulation power spectrum sample spectral modulation frequency.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            the modulation power spectrum sample spectral modulation frequency.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;mps_f&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s2">&quot;should run class method of __call__ first.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mps_f</span></div>
+
+<div class="viewcode-block" id="ModulationPowerSpectrum.temporal_modulation_freq"><a class="viewcode-back" href="../../../api/aspen.processings.modulation_power_spectrum.html#aspen.processings.modulation_power_spectrum.ModulationPowerSpectrum.temporal_modulation_freq">[docs]</a>    <span class="k">def</span> <span class="nf">temporal_modulation_freq</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return the modulation power spectrum sample temporal modulation frequency.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            the modulation power spectrum sample temporal modulation frequency.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;mps_t&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s2">&quot;should run class method of __call__ first.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mps_t</span></div>
+
+<div class="viewcode-block" id="ModulationPowerSpectrum.raw_mps"><a class="viewcode-back" href="../../../api/aspen.processings.modulation_power_spectrum.html#aspen.processings.modulation_power_spectrum.ModulationPowerSpectrum.raw_mps">[docs]</a>    <span class="k">def</span> <span class="nf">raw_mps</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Return the listed result of 2-D discrete Fourier transform.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            the listed result of 2-D discrete Fourier transform.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s2">&quot;mps&quot;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">NameError</span><span class="p">(</span><span class="s2">&quot;should run class method of __call__ first.&quot;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mps</span></div></div>
+
+
+<div class="viewcode-block" id="modulation_power_spectrum"><a class="viewcode-back" href="../../../api/aspen.processings.modulation_power_spectrum.html#aspen.processings.modulation_power_spectrum.modulation_power_spectrum">[docs]</a><span class="k">def</span> <span class="nf">modulation_power_spectrum</span><span class="p">(</span>
+    <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span>
+    <span class="n">spec_samp_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+    <span class="n">gauss_window_alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="n">spacing_freq</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="n">lower_freq</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">upper_freq</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">8000</span><span class="p">,</span>
+    <span class="n">spec_normalize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">spec_db_range</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+    <span class="n">fft2_win_duration</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="n">fft2_win_shift</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">backend</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;librosa&quot;</span><span class="p">,</span>
+    <span class="n">samp_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16000</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Modulation Power Spectrum.</span>
+
+<span class="sd">    This method is heavily inspired by soundsig (https://github.com/theunissenlab/soundsig).</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        x: Input signal</span>
+<span class="sd">        spec_samp_freq: Sampling frequency in spectrogram space.</span>
+<span class="sd">            Defaults to 1000.</span>
+<span class="sd">        gauss_window_alpha: The parameter to generate Gaussian window.</span>
+<span class="sd">            The detail is shown in MATLAB gaussian window method</span>
+<span class="sd">            (https://www.mathworks.com/help/signal/ref/gausswin.html). Defaults to 3.</span>
+<span class="sd">        spacing_freq: The time-frequency scale for the spectrogram in Hz.</span>
+<span class="sd">            This variable determines the width of the gaussian window to calculate the SFTF. Defaults to 50.</span>
+<span class="sd">        lower_freq: Lower frequency in the spectrogram to save space.</span>
+<span class="sd">            Defaults to 0.</span>
+<span class="sd">        upper_freq:</span>
+<span class="sd">            Upper frequency in the spectrogram to save space. Upper limit is the half of sampling_frequency.</span>
+<span class="sd">            Defaults to 8000.</span>
+<span class="sd">        spec_normalize:</span>
+<span class="sd">            The flag of normalizing spectrogram resulted from STFT. Defaults to True.</span>
+<span class="sd">        spec_db_range:</span>
+<span class="sd">            The range to narrow down the spectrogram amplitude for making it easier to visualize. Defaults to 50.</span>
+<span class="sd">        fft2_win_duration:</span>
+<span class="sd">            The duration of gaussian window for 2D-FFT in millisecond.</span>
+<span class="sd">            If the value is 0, fft2 is executed withoud window-shifting. Defaults to 100.</span>
+<span class="sd">        fft2_win_shift:</span>
+<span class="sd">            The number of points to shift segments for 2D-FFT.</span>
+<span class="sd">            Defaults is 0 that means `(wduration - 1) // 6` (wduration is fft2_win_duration in sample).</span>
+<span class="sd">        backend: The library to calculate STFT.</span>
+<span class="sd">            The choices are &quot;librosa&quot; or &quot;scipy&quot;. Defaults to &quot;librosa&quot;.</span>
+<span class="sd">        samp_freq: Sampling frequency. Defaults to 16000.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Return the pameters for short-time Fourier transform,</span>
+<span class="sd">        the modulation power spectrum sample spectral modulation frequency,</span>
+<span class="sd">        the modulation power spectrum sample temporal modulation frequency,</span>
+<span class="sd">        the listed result of 2-D discrete Fourier transform and</span>
+<span class="sd">        the modulation power spectrum.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">mps</span> <span class="o">=</span> <span class="n">ModulationPowerSpectrum</span><span class="p">(</span>
+        <span class="n">spec_samp_freq</span><span class="p">,</span>
+        <span class="n">gauss_window_alpha</span><span class="p">,</span>
+        <span class="n">spacing_freq</span><span class="p">,</span>
+        <span class="n">lower_freq</span><span class="p">,</span>
+        <span class="n">upper_freq</span><span class="p">,</span>
+        <span class="n">spec_normalize</span><span class="p">,</span>
+        <span class="n">spec_db_range</span><span class="p">,</span>
+        <span class="n">fft2_win_duration</span><span class="p">,</span>
+        <span class="n">fft2_win_shift</span><span class="p">,</span>
+        <span class="n">backend</span><span class="p">,</span>
+        <span class="n">samp_freq</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">mps_pow</span> <span class="o">=</span> <span class="n">mps</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">mps</span><span class="o">.</span><span class="n">stft_parameters</span><span class="p">(),</span>
+        <span class="n">mps</span><span class="o">.</span><span class="n">spectral_modulation_freq</span><span class="p">(),</span>
+        <span class="n">mps</span><span class="o">.</span><span class="n">temporal_modulation_freq</span><span class="p">(),</span>
+        <span class="n">mps</span><span class="o">.</span><span class="n">raw_mps</span><span class="p">(),</span>
+        <span class="n">mps_pow</span><span class="p">,</span>
+    <span class="p">)</span></div>
+</pre></div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Takanori Ashihara.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

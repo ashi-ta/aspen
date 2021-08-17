@@ -1,0 +1,37 @@
+﻿aspen.sounds
+============
+
+.. automodule:: aspen.sounds
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   aspen.sounds.am_tone
+   aspen.sounds.click_train_pitch
+   aspen.sounds.colored_noise
+   aspen.sounds.complex_tone
+   aspen.sounds.filtered_noise
+   aspen.sounds.fm_tone
+   aspen.sounds.pure_tone
+

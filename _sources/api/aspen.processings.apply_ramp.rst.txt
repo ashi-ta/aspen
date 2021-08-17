@@ -1,0 +1,35 @@
+aspen.processings.apply\_ramp
+=============================
+
+.. automodule:: aspen.processings.apply_ramp
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      apply_ramp
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ApplyRamp
+   
+   
+
+   
+   
+   
+
+
+

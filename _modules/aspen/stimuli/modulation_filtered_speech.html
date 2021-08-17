@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aspen.stimuli.modulation_filtered_speech &#8212; ASPEN  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx_paramlinks.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/katex-math.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+    <script src="../../../_static/katex_autorenderer.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../index.html">
+<p class="title">ASPEN</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../getting_started.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../configuration.html">
+  Customize Output
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../visualization.html">
+  Visualization
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api_references.html">
+  API References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <h1>Source code for aspen.stimuli.modulation_filtered_speech</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># encoding: utf-8</span>
+<span class="sd">&quot;&quot;&quot;Modulation-filtered speech&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Sequence</span>
+
+<span class="kn">import</span> <span class="nn">librosa</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.fft</span>
+
+<span class="kn">from</span> <span class="nn">aspen.interfaces.abs_common_interface</span> <span class="kn">import</span> <span class="n">AbsCommonInterface</span>
+<span class="kn">from</span> <span class="nn">aspen.interfaces.abs_stimulus_interface</span> <span class="kn">import</span> <span class="n">AbsStimulusInterface</span>
+<span class="kn">from</span> <span class="nn">aspen.processings.modulation_power_spectrum</span> <span class="kn">import</span> <span class="n">modulation_power_spectrum</span>
+<span class="kn">from</span> <span class="nn">aspen.utils.cli_utils</span> <span class="kn">import</span> <span class="n">strtobool</span>
+
+
+<div class="viewcode-block" id="ModulationFilteredSpeech"><a class="viewcode-back" href="../../../api/aspen.stimuli.modulation_filtered_speech.html#aspen.stimuli.modulation_filtered_speech.ModulationFilteredSpeech">[docs]</a><span class="k">class</span> <span class="nc">ModulationFilteredSpeech</span><span class="p">(</span><span class="n">AbsCommonInterface</span><span class="p">,</span> <span class="n">AbsStimulusInterface</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generate modulation-filtered speech.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        samp_freq: Sampling frequency. Defaults to 16000.</span>
+<span class="sd">        temporal_stopbands: Lower &amp; upper temporal modulation frequency of bandstop.</span>
+<span class="sd">            Defaults to &quot;100_200&quot;.</span>
+<span class="sd">        spectral_stopbands: Lower &amp; upper spectral modulation frequency of bandstop.</span>
+<span class="sd">            Defaults to &quot;100_200&quot;.</span>
+<span class="sd">        spec_samp_freq: Sampling frequency in spectrogram space in Hz.</span>
+<span class="sd">            The value determines the width of Gaussian window shift to calculate the spectrogram. Defaults to 1000.</span>
+<span class="sd">        gauss_window_alpha: Width factor of Gaussian window.</span>
+<span class="sd">            The value is inversely proportional to the width of the window.</span>
+<span class="sd">            (ref: https://www.mathworks.com/help/signal/ref/gausswin.html) Defaults to 3.</span>
+<span class="sd">        spacing_freq: The time-frequency scale for the spectrogram in Hz.</span>
+<span class="sd">            This value determines the width of the Gaussian window to calculate spectrogram. Defaults to 50.</span>
+<span class="sd">        spec_standardize: Spectrogram normalize. Defaults to False.</span>
+<span class="sd">        spec_db_range: The range of narrowing down the spectrogram amplitude.</span>
+<span class="sd">            Defaults to -1 (without narrowing).</span>
+<span class="sd">        griffinlim_iter: Number of iteration for Griffin-Lim algorithm</span>
+<span class="sd">            Defaults to 20.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">samp_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16000</span><span class="p">,</span>
+        <span class="n">temporal_stopbands</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;100_200&quot;</span><span class="p">,</span>
+        <span class="n">spectral_stopbands</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;100_200&quot;</span><span class="p">,</span>
+        <span class="n">spec_samp_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">,</span>
+        <span class="n">gauss_window_alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="n">spacing_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="n">spec_standardize</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">spec_db_range</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">griffinlim_iter</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">=</span> <span class="n">samp_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temporal_stopbands</span> <span class="o">=</span> <span class="n">temporal_stopbands</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spectral_stopbands</span> <span class="o">=</span> <span class="n">spectral_stopbands</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spec_samp_freq</span> <span class="o">=</span> <span class="n">spec_samp_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gauss_window_alpha</span> <span class="o">=</span> <span class="n">gauss_window_alpha</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spacing_freq</span> <span class="o">=</span> <span class="n">spacing_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spec_standardize</span> <span class="o">=</span> <span class="n">spec_standardize</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spec_db_range</span> <span class="o">=</span> <span class="n">spec_db_range</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">griffinlim_iter</span> <span class="o">=</span> <span class="n">griffinlim_iter</span>
+
+<div class="viewcode-block" id="ModulationFilteredSpeech.add_arguments"><a class="viewcode-back" href="../../../api/aspen.stimuli.modulation_filtered_speech.html#aspen.stimuli.modulation_filtered_speech.ModulationFilteredSpeech.add_arguments">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">add_arguments</span><span class="p">(</span><span class="n">parser</span><span class="p">):</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">add_argument_group</span><span class="p">(</span><span class="s2">&quot;Noise-vocoded speech setting&quot;</span><span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--temporal-stopbands&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;100_200&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Lower &amp; upper temporal modulation frequency of bandstop&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--spectral-stopbands&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="s2">&quot;100_200&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Lower &amp; upper spectral modulation frequency of bandstop&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--spec-samp-freq&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Sampling frequency in spectrogram space&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--gauss-window-alpha&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Width factor of Gaussian window.&quot;</span>
+            <span class="s2">&quot;The value is inversely proportional to the width of the window.&quot;</span>
+            <span class="s2">&quot;ref: https://www.mathworks.com/help/signal/ref/gausswin.html&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--spacing-freq&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The time-frequency scale for the spectrogram in Hz&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--spec-standardize&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="n">strtobool</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The flag of Spectrogram standardization and narrowing down the amplitude range&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--spec-db-range&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;The range of narrowing down the spectrogram amplitude&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--griffinlim-iter&quot;</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of iteration for Griffin-Lim algorithm&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">parser</span></div>
+
+<div class="viewcode-block" id="ModulationFilteredSpeech.__call__"><a class="viewcode-back" href="../../../api/aspen.stimuli.modulation_filtered_speech.html#aspen.stimuli.modulation_filtered_speech.ModulationFilteredSpeech.__call__">[docs]</a>    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;Generate modulation-filtered speech.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            x: Speech signal.</span>
+<span class="sd">                x must be sequence-like object such as list, tuple and so on.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Stimulus of modulation filtered speech.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;input length must be 1, but got </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+
+        <span class="n">stimulus</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">temporal_stopbands</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">temporal_stopbands</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">float64</span>
+        <span class="p">)</span>
+        <span class="n">spectral_stopbands</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">spectral_stopbands</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">float64</span>
+        <span class="p">)</span>
+
+        <span class="c1"># mps is calculated from log-spectrogram</span>
+        <span class="p">(</span><span class="n">stft_param</span><span class="p">,</span> <span class="n">mps_f</span><span class="p">,</span> <span class="n">mps_t</span><span class="p">,</span> <span class="n">mps</span><span class="p">,</span> <span class="n">mps_pow</span><span class="p">,)</span> <span class="o">=</span> <span class="n">modulation_power_spectrum</span><span class="p">(</span>
+            <span class="n">stimulus</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spec_samp_freq</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">gauss_window_alpha</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spacing_freq</span><span class="p">,</span>
+            <span class="mi">0</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spec_standardize</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spec_db_range</span><span class="p">,</span>
+            <span class="mi">0</span><span class="p">,</span>
+            <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;librosa&quot;</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="c1"># condition of spectral and temporal modulation filtering</span>
+        <span class="n">mps_t_stopband_r</span> <span class="o">=</span> <span class="p">(</span><span class="n">mps_t</span> <span class="o">&gt;=</span> <span class="n">temporal_stopbands</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span>
+            <span class="n">mps_t</span> <span class="o">&lt;=</span> <span class="n">temporal_stopbands</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">mps_t_stopband_l</span> <span class="o">=</span> <span class="p">(</span><span class="n">mps_t</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="n">temporal_stopbands</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span>
+            <span class="n">mps_t</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="n">temporal_stopbands</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">mps_t_stopband</span> <span class="o">=</span> <span class="n">mps_t_stopband_r</span> <span class="o">+</span> <span class="n">mps_t_stopband_l</span>
+        <span class="n">mps_f</span> <span class="o">*=</span> <span class="mi">1000</span>  <span class="c1"># Hz to kHz</span>
+        <span class="n">mps_f_stopband_r</span> <span class="o">=</span> <span class="p">(</span><span class="n">mps_f</span> <span class="o">&gt;=</span> <span class="n">spectral_stopbands</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span>
+            <span class="n">mps_f</span> <span class="o">&lt;=</span> <span class="n">spectral_stopbands</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">mps_f_stopband_l</span> <span class="o">=</span> <span class="p">(</span><span class="n">mps_f</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="n">spectral_stopbands</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span>
+            <span class="n">mps_f</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="n">spectral_stopbands</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="p">)</span>
+        <span class="n">mps_f_stopband</span> <span class="o">=</span> <span class="n">mps_f_stopband_r</span> <span class="o">+</span> <span class="n">mps_f_stopband_l</span>
+        <span class="n">mps_tt_stopband</span><span class="p">,</span> <span class="n">mps_ff_stopband</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">mps_t_stopband</span><span class="p">,</span> <span class="n">mps_f_stopband</span><span class="p">)</span>
+        <span class="n">mps_tt_stopband_not</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">mps_tt_stopband</span><span class="p">)</span>
+        <span class="n">mps_ff_stopband_not</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_not</span><span class="p">(</span><span class="n">mps_ff_stopband</span><span class="p">)</span>
+
+        <span class="c1"># spectral LPF</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">mps_tt_stopband</span><span class="p">):</span>
+            <span class="n">filter2</span> <span class="o">=</span> <span class="n">mps_ff_stopband_not</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="c1"># temporal LPF</span>
+        <span class="k">elif</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">mps_ff_stopband</span><span class="p">):</span>
+            <span class="n">filter2</span> <span class="o">=</span> <span class="n">mps_tt_stopband_not</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+        <span class="c1"># notch filter or no filter</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">filter2</span> <span class="o">=</span> <span class="p">(</span><span class="n">mps_tt_stopband_not</span> <span class="o">*</span> <span class="n">mps_ff_stopband_not</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+        <span class="c1"># filtering</span>
+        <span class="n">filtered_mps</span> <span class="o">=</span> <span class="n">mps</span> <span class="o">*</span> <span class="n">filter2</span>
+
+        <span class="c1"># filtered mps to spectrogram</span>
+        <span class="n">spec_filtered</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">ifft2</span><span class="p">(</span><span class="n">filtered_mps</span><span class="p">))</span>
+
+        <span class="c1"># spectrogram without the phase to signal</span>
+        <span class="n">spec_filtered</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">spec_filtered</span> <span class="o">/</span> <span class="mi">20</span><span class="p">)</span>
+        <span class="n">stimulus</span> <span class="o">=</span> <span class="n">librosa</span><span class="o">.</span><span class="n">griffinlim</span><span class="p">(</span>
+            <span class="n">spec_filtered</span><span class="p">,</span>
+            <span class="n">n_iter</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">griffinlim_iter</span><span class="p">,</span>
+            <span class="n">hop_length</span><span class="o">=</span><span class="n">stft_param</span><span class="p">[</span><span class="s2">&quot;hop_length&quot;</span><span class="p">],</span>
+            <span class="n">win_length</span><span class="o">=</span><span class="n">stft_param</span><span class="p">[</span><span class="s2">&quot;n_fft&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">window</span><span class="o">=</span><span class="n">stft_param</span><span class="p">[</span><span class="s2">&quot;window&quot;</span><span class="p">],</span>
+            <span class="n">pad_mode</span><span class="o">=</span><span class="s2">&quot;constant&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">stimulus</span></div></div>
+</pre></div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Takanori Ashihara.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aspen.sounds.complex_tone &#8212; ASPEN  documentation</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx_paramlinks.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/katex-math.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+    <script src="../../../_static/katex_autorenderer.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="../../../index.html">
+<p class="title">ASPEN</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../getting_started.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../configuration.html">
+  Customize Output
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../visualization.html">
+  Visualization
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../api_references.html">
+  API References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <h1>Source code for aspen.sounds.complex_tone</h1><div class="highlight"><pre>
+<span></span><span class="ch">#!/usr/bin/env python3</span>
+<span class="c1"># encoding: utf-8</span>
+<span class="sd">&quot;&quot;&quot;Complex tone&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">logging</span> <span class="kn">import</span> <span class="n">getLogger</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Sequence</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">aspen.interfaces.abs_common_interface</span> <span class="kn">import</span> <span class="n">AbsCommonInterface</span>
+<span class="kn">from</span> <span class="nn">aspen.interfaces.abs_sound_interface</span> <span class="kn">import</span> <span class="n">AbsSoundInterface</span>
+<span class="kn">from</span> <span class="nn">aspen.processings.declip</span> <span class="kn">import</span> <span class="n">declip</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="ComplexTone"><a class="viewcode-back" href="../../../api/aspen.sounds.complex_tone.html#aspen.sounds.complex_tone.ComplexTone">[docs]</a><span class="k">class</span> <span class="nc">ComplexTone</span><span class="p">(</span><span class="n">AbsCommonInterface</span><span class="p">,</span> <span class="n">AbsSoundInterface</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Generate complex tone.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        complex_tone_duration: The duration of complex tone in millisecond.</span>
+<span class="sd">            Defaults to [1000].</span>
+<span class="sd">        complex_tone_fundamental_freq: The fundamental frequency of complex tone in Hz.</span>
+<span class="sd">            This value determines the interval of each frequency peak.</span>
+<span class="sd">            Defaults to [440].</span>
+<span class="sd">        complex_tone_num_harmonics: The number of harmonics.</span>
+<span class="sd">            Defaults to [10].</span>
+<span class="sd">        complex_tone_first_harmonic_freq: The frequency of first harmonics.</span>
+<span class="sd">            When this value is not same value as `--complex-tone-fundamental-freq`</span>
+<span class="sd">            or a multiple of `--complex-tone-fundamental-freq`,</span>
+<span class="sd">            the output signal becomes inharmonic. Defaults to [440].</span>
+<span class="sd">        complex_tone_harmonics_amp: Relative amplitude of each harmonics.</span>
+<span class="sd">            The format is like `2_1_1_1` which is meant that</span>
+<span class="sd">            the first harmonics has twice as much amplitude as the other three harmonics.</span>
+<span class="sd">            Defaults to [&quot;1&quot;] which generates the same amplitude signal for all harmonics.</span>
+<span class="sd">        complex_tone_tilt_type: Type of spectral tilt.</span>
+<span class="sd">            `up`, `down` means 6, -6 dB/Oct, respectively.</span>
+<span class="sd">            `default` will do nothing.</span>
+<span class="sd">        complex_tone_num_signals: Number of signals.</span>
+<span class="sd">            If this value greater than 2, the other arguments should contain 2 types.</span>
+<span class="sd">            Defaults to 1.</span>
+<span class="sd">        samp_freq: Sampling frequency. Defaults to 16000.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">complex_tone_duration</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1000</span><span class="p">],</span>
+        <span class="n">complex_tone_fundamental_freq</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">440</span><span class="p">],</span>
+        <span class="n">complex_tone_num_harmonics</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">],</span>
+        <span class="n">complex_tone_first_harmonic_freq</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">440</span><span class="p">],</span>
+        <span class="n">complex_tone_harmonics_amp</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
+        <span class="n">complex_tone_tilt_type</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span>
+        <span class="n">complex_tone_num_signals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">samp_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16000</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">duration</span> <span class="o">=</span> <span class="n">complex_tone_duration</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fundamental_freq</span> <span class="o">=</span> <span class="n">complex_tone_fundamental_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_harmonics</span> <span class="o">=</span> <span class="n">complex_tone_num_harmonics</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">first_harmonic_freq</span> <span class="o">=</span> <span class="n">complex_tone_first_harmonic_freq</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">harmonics_amp</span> <span class="o">=</span> <span class="n">complex_tone_harmonics_amp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tilt_type</span> <span class="o">=</span> <span class="n">complex_tone_tilt_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_signals</span> <span class="o">=</span> <span class="n">complex_tone_num_signals</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">=</span> <span class="n">samp_freq</span>
+
+<div class="viewcode-block" id="ComplexTone.add_arguments"><a class="viewcode-back" href="../../../api/aspen.sounds.complex_tone.html#aspen.sounds.complex_tone.ComplexTone.add_arguments">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">add_arguments</span><span class="p">(</span><span class="n">parser</span><span class="p">):</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">add_argument_group</span><span class="p">(</span><span class="s2">&quot;Complex tone setting&quot;</span><span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--complex-tone-duration&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="mi">1000</span><span class="p">],</span>
+            <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Duration of complex tone in millisecond&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--complex-tone-fundamental-freq&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="mi">440</span><span class="p">],</span>
+            <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Fundamental frequency of complex tone in Hz.&quot;</span>
+            <span class="s2">&quot;This value determines the interval of each frequency peak.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--complex-tone-num-harmonics&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span>
+            <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of harmonics&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--complex-tone-first-harmonic-freq&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="mi">440</span><span class="p">],</span>
+            <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Frequency of first harmonics.&quot;</span>
+            <span class="s2">&quot;When this value is not same value as `--complex-tone-fundamental-freq`&quot;</span>
+            <span class="s2">&quot;or a multiple of `--complex-tone-fundamental-freq`, &quot;</span>
+            <span class="s2">&quot;the output signal becomes inharmonic.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--complex-tone-harmonics-amp&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
+            <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Relative amplitude of each harmonics.&quot;</span>
+            <span class="s2">&quot;The format is like `2_1_1_1` which is meant that&quot;</span>
+            <span class="s2">&quot;the first harmonics has twice as much amplitude as the other three harmonics.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--complex-tone-tilt-type&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span>
+            <span class="n">nargs</span><span class="o">=</span><span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;up&quot;</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">,</span> <span class="s2">&quot;default&quot;</span><span class="p">],</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Type of spectral tilt.&quot;</span>
+            <span class="s2">&quot;`up`, `down` means 6, -6 dB/Oct, respectively.&quot;</span>
+            <span class="s2">&quot;`default` will do nothing.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span>
+            <span class="s2">&quot;--complex-tone-num-signals&quot;</span><span class="p">,</span>
+            <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+            <span class="n">default</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Number of signals. If this value greater than 2,&quot;</span>
+            <span class="s2">&quot;the other arguments should contain 2 types.&quot;</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">return</span> <span class="n">parser</span></div>
+
+<div class="viewcode-block" id="ComplexTone._generate_each"><a class="viewcode-back" href="../../../api/aspen.sounds.complex_tone.html#aspen.sounds.complex_tone.ComplexTone._generate_each">[docs]</a>    <span class="k">def</span> <span class="nf">_generate_each</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
+        <span class="n">duration</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">duration</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span>
+        <span class="n">fundamental_freq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fundamental_freq</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="n">num_harmonics</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_harmonics</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="n">first_harmonic_freq</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">first_harmonic_freq</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+        <span class="n">harmonics_amp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">harmonics_amp</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="n">tilt_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tilt_type</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">harmonics_amp</span> <span class="o">==</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">all</span><span class="p">():</span>
+            <span class="n">harmonics_amp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">num_harmonics</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">harmonics_amp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">num_harmonics</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Length of harmonics_amp must be equal with num_harmonics, but got </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="nb">len</span><span class="p">(</span><span class="n">harmonics_amp</span><span class="p">)</span>
+                    <span class="p">)</span>
+                <span class="p">)</span>
+
+        <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">samp_freq</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">duration</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_harmonics</span><span class="p">):</span>
+            <span class="n">x</span> <span class="o">+=</span> <span class="n">harmonics_amp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span>
+                <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">first_harmonic_freq</span> <span class="o">*</span> <span class="n">t</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span>
+            <span class="p">)</span>
+            <span class="n">first_harmonic_freq</span> <span class="o">+=</span> <span class="n">fundamental_freq</span>
+
+        <span class="k">if</span> <span class="n">tilt_type</span> <span class="o">!=</span> <span class="s2">&quot;default&quot;</span><span class="p">:</span>
+            <span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">rfft</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="s2">&quot;forward&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">tilt_type</span> <span class="o">==</span> <span class="s2">&quot;up&quot;</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">irfft</span><span class="p">(</span><span class="n">X</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="s2">&quot;forward&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">real</span><span class="p">[</span>
+                    <span class="p">:</span><span class="n">duration</span>
+                <span class="p">]</span>
+            <span class="k">elif</span> <span class="n">tilt_type</span> <span class="o">==</span> <span class="s2">&quot;down&quot;</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">fft</span><span class="o">.</span><span class="n">irfft</span><span class="p">(</span><span class="n">X</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">norm</span><span class="o">=</span><span class="s2">&quot;forward&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">real</span><span class="p">[</span>
+                    <span class="p">:</span><span class="n">duration</span>
+                <span class="p">]</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">declip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span></div></div>
+
+
+<div class="viewcode-block" id="complex_tone"><a class="viewcode-back" href="../../../api/aspen.sounds.complex_tone.html#aspen.sounds.complex_tone.complex_tone">[docs]</a><span class="k">def</span> <span class="nf">complex_tone</span><span class="p">(</span>
+    <span class="n">duration</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1000</span><span class="p">],</span>
+    <span class="n">fundamental_freq</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">440</span><span class="p">],</span>
+    <span class="n">num_harmonics</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">],</span>
+    <span class="n">first_harmonic_freq</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">440</span><span class="p">],</span>
+    <span class="n">harmonics_amp</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">],</span>
+    <span class="n">tilt_type</span><span class="p">:</span> <span class="n">Sequence</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span>
+    <span class="n">num_signals</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">samp_freq</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">16000</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Generate complex tone.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        duration: The duration of complex tone in millisecond.</span>
+<span class="sd">            Defaults to [1000].</span>
+<span class="sd">        fundamental_freq: The fundamental frequency of complex tone in Hz.</span>
+<span class="sd">            This value determines the interval of each frequency peak.</span>
+<span class="sd">            Defaults to [440].</span>
+<span class="sd">        num_harmonics: The number of harmonics.</span>
+<span class="sd">            Defaults to [10].</span>
+<span class="sd">        first_harmonic_freq: The frequency of first harmonics.</span>
+<span class="sd">            When this value is not same value as `--complex-tone-fundamental-freq`</span>
+<span class="sd">            or a multiple of `--complex-tone-fundamental-freq`,</span>
+<span class="sd">            the output signal becomes inharmonic. Defaults to [440].</span>
+<span class="sd">        harmonics_amp: Relative amplitude of each harmonics.</span>
+<span class="sd">            The format is like `2_1_1_1` which is meant that</span>
+<span class="sd">            the first harmonics has twice as much amplitude as the other three harmonics.</span>
+<span class="sd">            Defaults to [&quot;1&quot;] which generates the same amplitude signal for all harmonics.</span>
+<span class="sd">        tilt_type: Type of spectral tilt.</span>
+<span class="sd">            `up`, `down` means 6, -6 dB/Oct, respectively.</span>
+<span class="sd">            `default` will do nothing.</span>
+<span class="sd">        num_signals: Number of signals.</span>
+<span class="sd">            If this value greater than 2, the other arguments should contain 2 types.</span>
+<span class="sd">            Defaults to 1.</span>
+<span class="sd">        samp_freq: Sampling frequency. Defaults to 16000.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Output signals.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">return</span> <span class="n">ComplexTone</span><span class="p">(</span>
+        <span class="n">duration</span><span class="p">,</span>
+        <span class="n">fundamental_freq</span><span class="p">,</span>
+        <span class="n">num_harmonics</span><span class="p">,</span>
+        <span class="n">first_harmonic_freq</span><span class="p">,</span>
+        <span class="n">harmonics_amp</span><span class="p">,</span>
+        <span class="n">tilt_type</span><span class="p">,</span>
+        <span class="n">num_signals</span><span class="p">,</span>
+        <span class="n">samp_freq</span><span class="p">,</span>
+    <span class="p">)()</span></div>
+</pre></div>
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Takanori Ashihara.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

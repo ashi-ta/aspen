@@ -1,0 +1,35 @@
+aspen.processings.filter\_signal
+================================
+
+.. automodule:: aspen.processings.filter_signal
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      filter_signal
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      FilterSignal
+   
+   
+
+   
+   
+   
+
+
+

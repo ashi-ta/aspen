@@ -1,0 +1,29 @@
+aspen.stimuli.identity
+======================
+
+.. automodule:: aspen.stimuli.identity
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Identity
+   
+   
+
+   
+   
+   
+
+
+

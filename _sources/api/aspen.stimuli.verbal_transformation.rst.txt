@@ -1,0 +1,29 @@
+aspen.stimuli.verbal\_transformation
+====================================
+
+.. automodule:: aspen.stimuli.verbal_transformation
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      VerbalTransformation
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,35 @@
+﻿aspen.interfaces
+================
+
+.. automodule:: aspen.interfaces
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   aspen.interfaces.abs_common_interface
+   aspen.interfaces.abs_processing_interface
+   aspen.interfaces.abs_sound_interface
+   aspen.interfaces.abs_stimulus_interface
+   aspen.interfaces.abs_visualization_interface
+

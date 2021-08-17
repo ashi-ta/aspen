@@ -1,0 +1,35 @@
+aspen.processings.extract\_envelope
+===================================
+
+.. automodule:: aspen.processings.extract_envelope
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      extract_envelope
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ExtractEnvelope
+   
+   
+
+   
+   
+   
+
+
+

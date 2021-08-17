@@ -1,0 +1,35 @@
+aspen.sounds.filtered\_noise
+============================
+
+.. automodule:: aspen.sounds.filtered_noise
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      filtered_noise
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      FilteredNoise
+   
+   
+
+   
+   
+   
+
+
+

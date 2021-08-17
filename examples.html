@@ -1,0 +1,660 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examples &#8212; ASPEN  documentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/katex-math.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+    <script src="_static/katex_autorenderer.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API References" href="api_references.html" />
+    <link rel="prev" title="Visualization" href="visualization.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="index.html">
+<p class="title">ASPEN</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="getting_started.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="configuration.html">
+  Customize Output
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="visualization.html">
+  Visualization
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="api_references.html">
+  API References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#auditory-streaming">
+   Auditory streaming
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#continuity-illusion">
+   Continuity illusion
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#iterated-rippled-noise">
+   Iterated rippled noise
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interaural-phase-difference-modulation">
+   Interaural phase difference/modulation
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="examples">
+<span id="exs"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>This section provides some audio examples created by ASPEN.</p>
+<div class="section" id="auditory-streaming">
+<h2>Auditory streaming<a class="headerlink" href="#auditory-streaming" title="Permalink to this headline">¶</a></h2>
+<table class="table">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 29%" />
+<col style="width: 27%" />
+<col style="width: 27%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>audio</p></td>
+<td><p>A tone [Hz]</p></td>
+<td><p>B tone [Hz]</p></td>
+<td><p>spectrogram</p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/auditory_streaming400.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>315</p></td>
+<td><p>400</p></td>
+<td><p><a class="reference internal" href="_images/auditory_streaming400.png"><img alt="as400img" src="_images/auditory_streaming400.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><audio controls="controls">
+  <source src="_static/auditory_streaming500.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>315</p></td>
+<td><p>500</p></td>
+<td><p><a class="reference internal" href="_images/auditory_streaming500.png"><img alt="as500img" src="_images/auditory_streaming500.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/auditory_streaming600.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>315</p></td>
+<td><p>600</p></td>
+<td><p><a class="reference internal" href="_images/auditory_streaming600.png"><img alt="as600img" src="_images/auditory_streaming600.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>The corresponding configuration of the first row is below:</p>
+<div class="toggle docutils container">
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># general setting</span>
+<span class="nt">stimulus-module</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">auditory_streaming</span>
+<span class="nt">samp-freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16000</span>
+<span class="nt">outdir</span><span class="p">:</span> <span class="s">&quot;data/auditory_streaming&quot;</span>
+<span class="nt">suffix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pure_a315hz_b400hz</span>
+
+<span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">pure_tone</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">pure-tone-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">50</span><span class="p p-Indicator">,</span> <span class="nv">50</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">315</span><span class="p p-Indicator">,</span> <span class="nv">400</span><span class="p p-Indicator">]</span>
+
+<span class="c1"># stimulus setting</span>
+<span class="c1"># A-B-A,A-B-A,...</span>
+<span class="nt">num-repetition</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+<span class="nt">ab-interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">60</span>
+<span class="nt">aba-interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">170</span>
+<span class="nt">ab-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+
+<span class="c1"># postprocessings setting</span>
+<span class="nt">postprocess-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">declip</span><span class="p p-Indicator">]</span>
+<span class="nt">declip-thres</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># visualization</span>
+<span class="nt">visualization-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">spectrogram</span><span class="p p-Indicator">]</span>
+<span class="nt">visualization-outdir</span><span class="p">:</span> <span class="s">&quot;data/auditory_streaming/vis&quot;</span>
+<span class="nt">visualization-temporal-limit</span><span class="p">:</span> <span class="s">&quot;0_2200&quot;</span>
+<span class="nt">spectrogram-visualizer-scale</span><span class="p">:</span> <span class="s">&quot;linear&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="continuity-illusion">
+<h2>Continuity illusion<a class="headerlink" href="#continuity-illusion" title="Permalink to this headline">¶</a></h2>
+<table class="table">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 32%" />
+<col style="width: 39%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>audio</p></td>
+<td><p>gap method</p></td>
+<td><p>spectrogram</p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/cnt_replace.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>replace</p></td>
+<td><p><a class="reference internal" href="_images/cnt_replace.png"><img alt="cnt_repimg" src="_images/cnt_replace.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><audio controls="controls">
+  <source src="_static/cnt_overlap.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>overlap</p></td>
+<td><p><a class="reference internal" href="_images/cnt_overlap.png"><img alt="cnt_ovlimg" src="_images/cnt_overlap.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/cnt_silent.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>silent</p></td>
+<td><p><a class="reference internal" href="_images/cnt_silent.png"><img alt="cnt_silimg" src="_images/cnt_silent.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>The corresponding configuration of the first row is below:</p>
+<div class="toggle docutils container">
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># general setting</span>
+<span class="nt">stimulus-module</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">continuity</span>
+<span class="nt">samp-freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16000</span>
+<span class="nt">outdir</span><span class="p">:</span> <span class="s">&quot;data/continuity&quot;</span>
+<span class="nt">suffix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">replace_pure_tone</span>
+<span class="nt">seed</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">pure_tone</span><span class="p p-Indicator">,</span> <span class="nv">filtered_noise</span><span class="p p-Indicator">]</span>
+<span class="c1"># pure_tone setting</span>
+<span class="nt">pure-tone-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">5000</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1000</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># filtered_nosie setting</span>
+<span class="nt">filtered-noise-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">5000</span><span class="p p-Indicator">]</span>
+<span class="nt">filtered-noise-btype</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">bandpass</span><span class="p p-Indicator">]</span>
+<span class="nt">filtered-noise-filter-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;500_2000&quot;</span><span class="p p-Indicator">]</span>
+<span class="nt">filtered-noise-filter-impulse-response</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">fir</span><span class="p p-Indicator">]</span>
+<span class="nt">filtered-noise-filter-order</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">512</span><span class="p p-Indicator">]</span>
+<span class="nt">filtered-noise-filter-firwin</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">hann</span><span class="p p-Indicator">]</span>
+<span class="nt">filtered-noise-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># stimulus setting</span>
+<span class="nt">target-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="nt">gap-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">200</span>
+<span class="nt">gap-method</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">replace</span>
+<span class="nt">gap-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">target-snr</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">-14</span>
+
+<span class="c1"># postprocessings setting</span>
+<span class="nt">postprocess-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">declip</span><span class="p p-Indicator">,</span> <span class="nv">apply_ramp</span><span class="p p-Indicator">]</span>
+<span class="nt">declip-thres</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">apply-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">apply-ramp-wfunction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hann</span>
+<span class="nt">apply-ramp-position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">both</span>
+
+<span class="c1"># visualization</span>
+<span class="nt">visualization-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">spectrogram</span><span class="p p-Indicator">]</span>
+<span class="nt">visualization-outdir</span><span class="p">:</span> <span class="s">&quot;data/continuity/vis&quot;</span>
+<span class="nt">visualization-temporal-limit</span><span class="p">:</span> <span class="s">&quot;0_2000&quot;</span>
+<span class="nt">spectrogram-visualizer-scale</span><span class="p">:</span> <span class="s">&quot;linear&quot;</span>
+<span class="nt">spectrogram-visualizer-vmax</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30000</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="iterated-rippled-noise">
+<h2>Iterated rippled noise<a class="headerlink" href="#iterated-rippled-noise" title="Permalink to this headline">¶</a></h2>
+<table class="table">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 20%" />
+<col style="width: 23%" />
+<col style="width: 32%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>audio</p></td>
+<td><p>iteration</p></td>
+<td><p>delay [ms]</p></td>
+<td><p>spectrum</p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/irn_i8_d1.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>8</p></td>
+<td><p>1</p></td>
+<td><p><a class="reference internal" href="_images/irn_i8_d1.png"><img alt="irn_i8_d1img" src="_images/irn_i8_d1.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><audio controls="controls">
+  <source src="_static/irn_i4_d1.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>4</p></td>
+<td><p>1</p></td>
+<td><p><a class="reference internal" href="_images/irn_i4_d1.png"><img alt="irn_i4_d1img" src="_images/irn_i4_d1.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/irn_i2_d1.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>2</p></td>
+<td><p>1</p></td>
+<td><p><a class="reference internal" href="_images/irn_i2_d1.png"><img alt="irn_i2_d1img" src="_images/irn_i2_d1.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><audio controls="controls">
+  <source src="_static/irn_i1_d1.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p><a class="reference internal" href="_images/irn_i1_d1.png"><img alt="irn_i1_d1img" src="_images/irn_i1_d1.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/irn_i8_d2.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>8</p></td>
+<td><p>2</p></td>
+<td><p><a class="reference internal" href="_images/irn_i8_d2.png"><img alt="irn_i8_d2img" src="_images/irn_i8_d2.png" style="width: 162.5px; height: 54.0px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>The corresponding configuration of the first row is below:</p>
+<div class="toggle docutils container">
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># general setting</span>
+<span class="nt">stimulus-module</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">iterated_rippled_noise</span>
+<span class="nt">samp-freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16000</span>
+<span class="nt">outdir</span><span class="p">:</span> <span class="s">&quot;data/iterated_rippled_noise&quot;</span>
+<span class="nt">suffix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">iter8_delay1</span>
+
+<span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">colored_noise</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-color</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">white</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1000</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># stimulus setting</span>
+<span class="nt">num-iteration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="nt">delay</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># postprocessings setting</span>
+<span class="nt">postprocess-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">declip</span><span class="p p-Indicator">,</span> <span class="nv">apply_ramp</span><span class="p p-Indicator">]</span>
+<span class="nt">declip-thres</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">apply-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">apply-ramp-wfunction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hann</span>
+<span class="nt">apply-ramp-position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">both</span>
+
+<span class="c1"># visualization</span>
+<span class="nt">visualization-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">spectrum</span><span class="p p-Indicator">]</span>
+<span class="nt">visualization-outdir</span><span class="p">:</span> <span class="s">&quot;data/iterated_rippled_noise/vis&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="interaural-phase-difference-modulation">
+<h2>Interaural phase difference/modulation<a class="headerlink" href="#interaural-phase-difference-modulation" title="Permalink to this headline">¶</a></h2>
+<table class="table">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 27%" />
+<col style="width: 32%" />
+<col style="width: 23%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>audio</p></td>
+<td><p>right ear[degree]</p></td>
+<td><p>amplitude modulation</p></td>
+<td><p>waveform</p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/ipd0.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>0</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference internal" href="_images/ipd0.png"><img alt="ipd0img" src="_images/ipd0.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><audio controls="controls">
+  <source src="_static/ipd45.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>+45</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference internal" href="_images/ipd45.png"><img alt="ipd45img" src="_images/ipd45.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/ipd90.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>+90</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference internal" href="_images/ipd90.png"><img alt="ipd90img" src="_images/ipd90.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><audio controls="controls">
+  <source src="_static/ipd_45.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>-45</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference internal" href="_images/ipd_45.png"><img alt="ipd_45img" src="_images/ipd_45.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/ipd_90.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>-90</p></td>
+<td><p>-</p></td>
+<td><p><a class="reference internal" href="_images/ipd_90.png"><img alt="ipd_90img" src="_images/ipd_90.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><audio controls="controls">
+  <source src="_static/ipm0.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>0</p></td>
+<td><p>✓</p></td>
+<td><p><a class="reference internal" href="_images/ipm0.png"><img alt="ipm0img" src="_images/ipm0.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/ipm45.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>+45</p></td>
+<td><p>✓</p></td>
+<td><p><a class="reference internal" href="_images/ipm45.png"><img alt="ipm45img" src="_images/ipm45.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><audio controls="controls">
+  <source src="_static/ipm90.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>+90</p></td>
+<td><p>✓</p></td>
+<td><p><a class="reference internal" href="_images/ipm90.png"><img alt="ipm90img" src="_images/ipm90.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+<tr class="row-even"><td><p><audio controls="controls">
+  <source src="_static/ipm_45.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>-45</p></td>
+<td><p>✓</p></td>
+<td><p><a class="reference internal" href="_images/ipm_45.png"><img alt="ipm_45img" src="_images/ipm_45.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><audio controls="controls">
+  <source src="_static/ipm_90.wav" type="audio/wav">
+  Your browser does not support the <code>audio</code> element.
+</audio></p></td>
+<td><p>-90</p></td>
+<td><p>✓</p></td>
+<td><p><a class="reference internal" href="_images/ipm_90.png"><img alt="ipm_90img" src="_images/ipm_90.png" style="width: 97.5px; height: 64.95px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>The corresponding configuration of the second and seventh row is below:</p>
+<div class="toggle docutils container">
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">second.conf</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># general setting</span>
+<span class="nt">stimulus-module</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">identity</span>
+<span class="nt">samp-freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16000</span>
+<span class="nt">outdir</span><span class="p">:</span> <span class="s">&quot;data/identity&quot;</span>
+<span class="nt">suffix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">interaural_phase_difference_deg45</span>
+
+<span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">pure_tone</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1000</span><span class="p p-Indicator">,</span> <span class="nv">1000</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">520</span><span class="p p-Indicator">,</span> <span class="nv">520</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-phase</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">45</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+
+<span class="c1"># stimuli setting</span>
+<span class="nt">binaural</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+
+<span class="c1"># postprocessings setting</span>
+<span class="nt">postprocess-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">apply_ramp</span><span class="p p-Indicator">]</span>
+<span class="nt">apply-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">apply-ramp-wfunction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hann</span>
+<span class="nt">apply-ramp-position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">both</span>
+
+<span class="c1"># visualization</span>
+<span class="nt">visualization-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">waveform</span><span class="p p-Indicator">]</span>
+<span class="nt">visualization-outdir</span><span class="p">:</span> <span class="s">&quot;data/identity/vis&quot;</span>
+<span class="nt">visualization-temporal-limit</span><span class="p">:</span> <span class="s">&quot;0_50&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">seventh.conf</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># general setting</span>
+<span class="nt">stimulus-module</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">identity</span>
+<span class="nt">samp-freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">16000</span>
+<span class="nt">outdir</span><span class="p">:</span> <span class="s">&quot;data/identity&quot;</span>
+<span class="nt">suffix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">interaural_phase_modulation_deg45</span>
+
+<span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">am_tone</span><span class="p p-Indicator">]</span>
+<span class="nt">am-tone-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1000</span><span class="p p-Indicator">,</span> <span class="nv">1000</span><span class="p p-Indicator">]</span>
+<span class="nt">am-tone-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">520</span><span class="p p-Indicator">,</span> <span class="nv">520</span><span class="p p-Indicator">]</span>
+<span class="nt">am-tone-phase</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">45</span><span class="p p-Indicator">]</span>
+<span class="nt">am-tone-modulation-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">41</span><span class="p p-Indicator">,</span> <span class="nv">41</span><span class="p p-Indicator">]</span>
+<span class="nt">am-tone-modulator-phase</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">]</span>
+<span class="nt">am-tone-depth</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">100</span><span class="p p-Indicator">,</span> <span class="nv">100</span><span class="p p-Indicator">]</span>
+<span class="nt">am-tone-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+
+<span class="c1"># stimuli setting</span>
+<span class="nt">binaural</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
+
+<span class="c1"># postprocessings setting</span>
+<span class="nt">postprocess-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">apply_ramp</span><span class="p p-Indicator">]</span>
+<span class="nt">apply-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">apply-ramp-wfunction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hann</span>
+<span class="nt">apply-ramp-position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">both</span>
+
+<span class="c1"># visualization</span>
+<span class="nt">visualization-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">waveform</span><span class="p p-Indicator">]</span>
+<span class="nt">visualization-outdir</span><span class="p">:</span> <span class="s">&quot;data/identity/vis&quot;</span>
+<span class="nt">visualization-temporal-limit</span><span class="p">:</span> <span class="s">&quot;0_50&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="visualization.html" title="previous page">Visualization</a>
+    <a class='right-next' id="next-link" href="api_references.html" title="next page">API References</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Takanori Ashihara.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

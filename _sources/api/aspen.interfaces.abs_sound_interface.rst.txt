@@ -1,0 +1,29 @@
+aspen.interfaces.abs\_sound\_interface
+======================================
+
+.. automodule:: aspen.interfaces.abs_sound_interface
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AbsSoundInterface
+   
+   
+
+   
+   
+   
+
+
+

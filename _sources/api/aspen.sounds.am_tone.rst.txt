@@ -1,0 +1,35 @@
+aspen.sounds.am\_tone
+=====================
+
+.. automodule:: aspen.sounds.am_tone
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      am_tone
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AmTone
+   
+   
+
+   
+   
+   
+
+
+

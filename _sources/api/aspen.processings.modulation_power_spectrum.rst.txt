@@ -1,0 +1,35 @@
+aspen.processings.modulation\_power\_spectrum
+=============================================
+
+.. automodule:: aspen.processings.modulation_power_spectrum
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      modulation_power_spectrum
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ModulationPowerSpectrum
+   
+   
+
+   
+   
+   
+
+
+

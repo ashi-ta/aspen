@@ -1,0 +1,35 @@
+aspen.sounds.pure\_tone
+=======================
+
+.. automodule:: aspen.sounds.pure_tone
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      pure_tone
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      PureTone
+   
+   
+
+   
+   
+   
+
+
+

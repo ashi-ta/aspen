@@ -1,0 +1,29 @@
+aspen.stimuli.iterated\_rippled\_noise
+======================================
+
+.. automodule:: aspen.stimuli.iterated_rippled_noise
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      IteratedRippledNoise
+   
+   
+
+   
+   
+   
+
+
+

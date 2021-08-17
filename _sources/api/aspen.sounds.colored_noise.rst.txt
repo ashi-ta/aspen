@@ -1,0 +1,35 @@
+aspen.sounds.colored\_noise
+===========================
+
+.. automodule:: aspen.sounds.colored_noise
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      colored_noise
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ColoredNoise
+   
+   
+
+   
+   
+   
+
+
+

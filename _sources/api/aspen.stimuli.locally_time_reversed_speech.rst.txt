@@ -1,0 +1,29 @@
+aspen.stimuli.locally\_time\_reversed\_speech
+=============================================
+
+.. automodule:: aspen.stimuli.locally_time_reversed_speech
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      LocallyTimeReversedSpeech
+   
+   
+
+   
+   
+   
+
+
+

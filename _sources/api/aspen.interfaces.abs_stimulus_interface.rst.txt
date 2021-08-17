@@ -1,0 +1,29 @@
+aspen.interfaces.abs\_stimulus\_interface
+=========================================
+
+.. automodule:: aspen.interfaces.abs_stimulus_interface
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AbsStimulusInterface
+   
+   
+
+   
+   
+   
+
+
+

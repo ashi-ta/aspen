@@ -1,0 +1,35 @@
+aspen.sounds.click\_train\_pitch
+================================
+
+.. automodule:: aspen.sounds.click_train_pitch
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      click_train_pitch
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      ClickTrainPitch
+   
+   
+
+   
+   
+   
+
+
+

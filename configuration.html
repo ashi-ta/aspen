@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customize Output &#8212; ASPEN  documentation</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx_paramlinks.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/katex-math.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js"></script>
+    <script src="_static/katex_autorenderer.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Visualization" href="visualization.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+<a class="navbar-brand" href="index.html">
+<p class="title">ASPEN</p>
+</a>
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="getting_started.html">
+  Getting Started
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Customize Output
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="visualization.html">
+  Visualization
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="examples.html">
+  Examples
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="api_references.html">
+  API References
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview-of-toolkit-architecture">
+   Overview of toolkit architecture
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#customize-configuration">
+   Customize configuration
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#customize-stimuli">
+     Customize
+     <strong>
+      stimuli
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#customize-sounds-and-processings">
+     Customize
+     <strong>
+      sounds
+     </strong>
+     and
+     <strong>
+      processings
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sounds-pipeline">
+       <strong>
+        sounds
+       </strong>
+       pipeline
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#processings-pipeline">
+       <strong>
+        processings
+       </strong>
+       pipeline
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-external-input">
+     Use external input
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="customize-output">
+<span id="configuration"></span><h1>Customize Output<a class="headerlink" href="#customize-output" title="Permalink to this headline">¶</a></h1>
+<p>You can generate any type of stimulus by customizing configuration file.
+Before explaining how to set up the configuration, we will first introduce the toolkit architecture.</p>
+<div class="section" id="overview-of-toolkit-architecture">
+<h2>Overview of toolkit architecture<a class="headerlink" href="#overview-of-toolkit-architecture" title="Permalink to this headline">¶</a></h2>
+<p>In ASPEN, the output is defined by four module:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="api/aspen.sounds.html#module-aspen.sounds"><span class="std std-ref">sounds</span></a></p></li>
+<li><p><a class="reference internal" href="api/aspen.stimuli.html#module-aspen.stimuli"><span class="std std-ref">stimuli</span></a></p></li>
+<li><p><a class="reference internal" href="api/aspen.processings.html#module-aspen.processings"><span class="std std-ref">processings</span></a></p></li>
+<li><p><a class="reference internal" href="api/aspen.visualizations.html#module-aspen.visualizations"><span class="std std-ref">visualizations</span></a></p></li>
+</ul>
+<p>A series of each module is proceeded sequentially and the processing flow is illustrated schematically in the following figure:</p>
+<hr class="docutils" />
+<img alt="_images/architecture.png" src="_images/architecture.png" />
+<hr class="docutils" />
+<p>A brief descriptions of each module are:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 80%" />
+<col style="width: 10%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Module</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>sounds</strong></p></td>
+<td><p>Define a generation of fundamental sound signal (e.g. pure tone, noise) inputted to <strong>stimuli</strong></p></td>
+<td><p><a class="reference internal" href="api/aspen.sounds.html#module-aspen.sounds"><span class="std std-ref">aspen.sounds</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>stimuli</strong></p></td>
+<td><p>Define a transformation of input signal specified by external signal and/or generated signal from <strong>sounds</strong></p></td>
+<td><p><a class="reference internal" href="api/aspen.stimuli.html#module-aspen.stimuli"><span class="std std-ref">aspen.stimuli</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>processings</strong></p></td>
+<td><p>Define a postprocessing (e.g. applying a ramp function) to finalize an auditory stimulus (optional)</p></td>
+<td><p><a class="reference internal" href="api/aspen.processings.html#module-aspen.processings"><span class="std std-ref">aspen.processings</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>visualizations</strong></p></td>
+<td><p>Define a visualization of output stimulus (optional)</p></td>
+<td><p><a class="reference internal" href="api/aspen.visualizations.html#module-aspen.visualizations"><span class="std std-ref">aspen.visualizations</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="customize-configuration">
+<h2>Customize configuration<a class="headerlink" href="#customize-configuration" title="Permalink to this headline">¶</a></h2>
+<p>In order to configure the aforementioned modules, you need to set up a YAML file.</p>
+<div class="section" id="customize-stimuli">
+<h3>Customize <strong>stimuli</strong><a class="headerlink" href="#customize-stimuli" title="Permalink to this headline">¶</a></h3>
+<p>For example, as shown in <a class="reference internal" href="getting_started.html#run-with-conf"><span class="std std-ref">previous section</span></a>, we could generate an iterated rippled noise (IRN) with <span class="math">\(F0=1000[Hz]\)</span> based on the configuration file:</p>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">iterated_rippled_noise.conf</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># general setting</span>
+<span class="nt">stimulus-module</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">iterated_rippled_noise</span>
+<span class="nt">samp-freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">48000</span>
+<span class="nt">outdir</span><span class="p">:</span> <span class="s">&quot;data/iterated_rippled_noise&quot;</span>
+<span class="nt">suffix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">iter8_delay1</span>
+
+<span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">colored_noise</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-color</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">white</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1000</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># stimulus setting</span>
+<span class="nt">num-iteration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="nt">delay</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># postprocessings setting</span>
+<span class="nt">postprocess-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">declip</span><span class="p p-Indicator">,</span> <span class="nv">apply_ramp</span><span class="p p-Indicator">]</span>
+<span class="nt">declip-thres</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">apply-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">apply-ramp-wfunction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hann</span>
+<span class="nt">apply-ramp-position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">both</span>
+
+<span class="c1"># visualization</span>
+<span class="nt">visualization-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">waveform</span><span class="p p-Indicator">,</span> <span class="nv">spectrogram</span><span class="p p-Indicator">,</span> <span class="nv">spectrum</span><span class="p p-Indicator">,</span> <span class="nv">mps</span><span class="p p-Indicator">]</span>
+<span class="nt">visualization-outdir</span><span class="p">:</span> <span class="s">&quot;data/iterated_rippled_noise/vis&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>In this example, the settings of each module correspond to each section except for basic I/O configuration (such as <code class="docutils literal notranslate"><span class="pre">samp-freq</span></code> and <code class="docutils literal notranslate"><span class="pre">outdir</span></code>).
+For example, you can change the <span class="math">\(F0\)</span> of IRN by overwriting the <code class="docutils literal notranslate"><span class="pre">delay</span></code> parameter:</p>
+<div class="literal-block-wrapper docutils container" id="id2">
+<div class="code-block-caption"><span class="caption-text">iterated_rippled_noise.conf</span><a class="headerlink" href="#id2" title="Permalink to this code">¶</a></div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># general setting</span>
+<span class="nt">stimulus-module</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">iterated_rippled_noise</span>
+<span class="nt">samp-freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">48000</span>
+<span class="nt">outdir</span><span class="p">:</span> <span class="s">&quot;data/iterated_rippled_noise&quot;</span>
+<span class="nt">suffix</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">iter8_delay2</span> <span class="c1"># &lt;- change the output name</span>
+
+<span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">colored_noise</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-color</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">white</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1000</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+
+<span class="c1"># stimulus setting</span>
+<span class="nt">num-iteration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">8</span>
+<span class="nt">delay</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>  <span class="c1"># &lt;- change the delay parameter</span>
+
+<span class="c1"># postprocessings setting</span>
+<span class="nt">postprocess-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">declip</span><span class="p p-Indicator">,</span> <span class="nv">apply_ramp</span><span class="p p-Indicator">]</span>
+<span class="nt">declip-thres</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">apply-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">apply-ramp-wfunction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hann</span>
+<span class="nt">apply-ramp-position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">both</span>
+
+<span class="c1"># visualization</span>
+<span class="nt">visualization-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">waveform</span><span class="p p-Indicator">,</span> <span class="nv">spectrogram</span><span class="p p-Indicator">,</span> <span class="nv">spectrum</span><span class="p p-Indicator">,</span> <span class="nv">mps</span><span class="p p-Indicator">]</span>
+<span class="nt">visualization-outdir</span><span class="p">:</span> <span class="s">&quot;data/iterated_rippled_noise/vis&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>Then run with the configuration:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> egs
+. ./path.sh
+generate.py --conf conf/iterated_rippled_noise.conf
+ls data/iterated_rippled_noise
+<span class="c1"># you can find data/iterated_rippled_noise/iter8_delay2.wav</span>
+</pre></div>
+</div>
+<p>You can also override parameters by command-line arguments:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> egs
+. ./path.sh
+generate.py --conf conf/iterated_rippled_noise.conf --delay <span class="m">3</span> --suffix iter8_delay3
+ls data/iterated_rippled_noise
+<span class="c1"># you can find data/iterated_rippled_noise/iter8_delay3.wav</span>
+</pre></div>
+</div>
+<p>You can show the help message:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>generate.py --stimulus-module iterated_rippled_noise --help
+<span class="c1"># need to specify the --stimulus-module arguments</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="customize-sounds-and-processings">
+<h3>Customize <strong>sounds</strong> and <strong>processings</strong><a class="headerlink" href="#customize-sounds-and-processings" title="Permalink to this headline">¶</a></h3>
+<p><strong>sounds</strong> and <strong>processings</strong> modules are introduced to pipeline of generation and transformation, respectively.
+In other words, <strong>sounds</strong> generate a list of fundamental sound signals and <strong>processings</strong> apply a list of transforms sequentially.</p>
+<div class="section" id="sounds-pipeline">
+<h4><strong>sounds</strong> pipeline<a class="headerlink" href="#sounds-pipeline" title="Permalink to this headline">¶</a></h4>
+<p><strong>sounds</strong> pipeline is defined by sound section of configuration file such as:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">colored_noise</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-color</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">white</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">1000</span><span class="p p-Indicator">]</span>
+<span class="nt">colored-noise-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+</pre></div>
+</div>
+<p>This example will generate one of the white noise with 1000ms internally in order to input to <strong>stimuli</strong> module (see also <a class="reference internal" href="api/aspen.sounds.colored_noise.html#module-aspen.sounds.colored_noise" title="aspen.sounds.colored_noise"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspen.sounds.colored_noise</span></code></a>).
+Some <strong>stimuli</strong> modules may require more than one signal, so multiple <strong>sounds</strong> settings are needed for that.
+For example, in the case of auditory streaming that consists of <em>A-B-A</em>, two tones are needed and are defined by:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">pure_tone</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2</span>
+<span class="nt">pure-tone-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">50</span><span class="p p-Indicator">,</span> <span class="nv">50</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">315</span><span class="p p-Indicator">,</span> <span class="nv">400</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>Here, two pure tones with 50ms are produced at frequencies of 315Hz (for <em>A tone</em>) and 400Hz (for <em>B tone</em>) (see also <a class="reference internal" href="api/aspen.sounds.pure_tone.html#module-aspen.sounds.pure_tone" title="aspen.sounds.pure_tone"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspen.sounds.pure_tone</span></code></a>).
+If you would design to set <em>A tone</em> as a harmonic complex tone instead of the pure tone above, the configuration is:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># sounds setting</span>
+<span class="nt">sound-generation-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">complex_tone</span><span class="p p-Indicator">,</span> <span class="nv">pure_tone</span><span class="p p-Indicator">]</span>
+<span class="nt">complex-tone-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">50</span><span class="p p-Indicator">]</span>
+<span class="nt">complex-tone-fundamental-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">315</span><span class="p p-Indicator">]</span>
+<span class="nt">complex-tone-num-harmonics</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">5</span><span class="p p-Indicator">]</span>
+<span class="nt">complex-tone-first-harmonic-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">315</span><span class="p p-Indicator">]</span>
+<span class="nt">complex-tone-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">pure-tone-num-signals</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">pure-tone-duration</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">50</span><span class="p p-Indicator">]</span>
+<span class="nt">pure-tone-freq</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">400</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>where the complex tone has the duration of 50ms, 5 harmonics and <span class="math">\(F0=315[Hz]\)</span> (see also <a class="reference internal" href="api/aspen.sounds.complex_tone.html#module-aspen.sounds.complex_tone" title="aspen.sounds.complex_tone"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspen.sounds.complex_tone</span></code></a>).</p>
+</div>
+<div class="section" id="processings-pipeline">
+<h4><strong>processings</strong> pipeline<a class="headerlink" href="#processings-pipeline" title="Permalink to this headline">¶</a></h4>
+<p><strong>processings</strong> pipeline is defined by postprocessing section of configuration file such as:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># postprocessings setting</span>
+<span class="nt">postprocess-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">declip</span><span class="p p-Indicator">,</span> <span class="nv">apply_ramp</span><span class="p p-Indicator">]</span>
+<span class="nt">declip-thres</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">apply-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">apply-ramp-wfunction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hann</span>
+<span class="nt">apply-ramp-position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">both</span>
+</pre></div>
+</div>
+<p>This example will apply <a class="reference internal" href="api/aspen.processings.declip.html#module-aspen.processings.declip" title="aspen.processings.declip"><code class="xref py py-class docutils literal notranslate"><span class="pre">declipping</span></code></a> and <a class="reference internal" href="api/aspen.processings.apply_ramp.html#module-aspen.processings.apply_ramp" title="aspen.processings.apply_ramp"><code class="xref py py-class docutils literal notranslate"><span class="pre">ramp</span> <span class="pre">function</span></code></a> to output of <strong>stimuli</strong> module sequentially.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In ASPEN, since the value range of signal is processed between 1.0 and -1.0 (<a class="reference external" href="https://numpy.org/doc/1.20/reference/arrays.scalars.html#numpy.float64">numpy.float64</a>) internally,
+the modules which manipulate the amplitude (e.g. <a class="reference internal" href="api/aspen.processings.declip.html#module-aspen.processings.declip" title="aspen.processings.declip"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspen.processings.declip</span></code></a> or <a class="reference internal" href="api/aspen.processings.amplitude_maximize.html#module-aspen.processings.amplitude_maximize" title="aspen.processings.amplitude_maximize"><code class="xref py py-class docutils literal notranslate"><span class="pre">aspen.processings.amplitude_maximize</span></code></a>) would be configured within the range.</p>
+</div>
+<p>For example, you can add the <a class="reference internal" href="api/aspen.processings.filter_signal.html#module-aspen.processings.filter_signal" title="aspen.processings.filter_signal"><code class="xref py py-class docutils literal notranslate"><span class="pre">filtering</span></code></a> step to the beginning of the postprocessing pipeline
+and replace <a class="reference internal" href="api/aspen.processings.declip.html#module-aspen.processings.declip" title="aspen.processings.declip"><code class="xref py py-class docutils literal notranslate"><span class="pre">declipping</span></code></a> with <a class="reference internal" href="api/aspen.processings.amplitude_maximize.html#module-aspen.processings.amplitude_maximize" title="aspen.processings.amplitude_maximize"><code class="xref py py-class docutils literal notranslate"><span class="pre">maximization</span> <span class="pre">of</span> <span class="pre">amplitude</span></code></a> such as:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># postprocessings setting</span>
+<span class="nt">postprocess-pipeline</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">filter_signal</span><span class="p p-Indicator">,</span> <span class="nv">amplitude_maximize</span><span class="p p-Indicator">,</span> <span class="nv">apply_ramp</span><span class="p p-Indicator">]</span>
+<span class="nt">filter-signal-btype</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">lowpass</span>
+<span class="nt">filter-signal-filter-freq</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">500</span>
+<span class="nt">amplitude-maximize-maximum-num</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="nt">apply-ramp-duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">apply-ramp-wfunction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">hann</span>
+<span class="nt">apply-ramp-position</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">both</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="use-external-input">
+<h3>Use external input<a class="headerlink" href="#use-external-input" title="Permalink to this headline">¶</a></h3>
+<p>Since some auditory stimuli are based on speech signal such as <a class="reference internal" href="api/aspen.stimuli.locally_time_reversed_speech.html#module-aspen.stimuli.locally_time_reversed_speech" title="aspen.stimuli.locally_time_reversed_speech"><code class="xref py py-class docutils literal notranslate"><span class="pre">locally</span> <span class="pre">time-reversed</span> <span class="pre">speech</span> <span class="pre">(LTRS)</span></code></a>,
+we provide an interface inputting WAV file or <a class="reference external" href="http://kaldi-asr.org/">Kaldi</a>-style file (i.e. ark and scp, see <a class="reference external" href="https://kaldi-asr.org/doc/io.html">Kaldi I/O mechanisms</a>).</p>
+<p>For example, to use your own WAV file, prepare a list file with the paths to the audio files:</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text">wavlist.txt</span><a class="headerlink" href="#id3" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/directory/sub-directory/speech1.wav
+/directory/sub-directory/speech2.wav
+/directory/sub-directory/speech3.wav
+...
+</pre></div>
+</div>
+</div>
+<p>Now you can pass the <code class="docutils literal notranslate"><span class="pre">wavlist.txt</span></code> to the arguments of <code class="docutils literal notranslate"><span class="pre">--wavlist</span></code> to generate LTRS stimuli:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">generate.py --conf conf/locally_time_reversed_speech.conf --wavlist wavlist.txt</span>
+</pre></div>
+</div>
+<p>and the display of <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">data/locally_time_reversed_speech</span></code> will be:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>speech1_duration25.wav
+speech2_duration25.wav
+speech3_duration25.wav
+...
+</pre></div>
+</div>
+<p>If both of the external input and signal from <strong>sounds</strong> will be required by <strong>stimuli</strong> such as <a class="reference internal" href="api/aspen.stimuli.continuity.html#module-aspen.stimuli.continuity" title="aspen.stimuli.continuity"><code class="xref py py-class docutils literal notranslate"><span class="pre">phonemic</span> <span class="pre">restoration</span></code></a>,
+you can simply specify both of them.
+The <a class="reference external" href="https://github.com/ashi-ta/aspen/blob/main/egs/conf/continuity.conf">example configuration YAML</a> for phonemic restoration is:</p>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-text">continuity.conf</span><a class="headerlink" href="#id4" title="Permalink to this code">¶</a></div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># general setting</span>
+stimulus-module: continuity
+samp-freq: <span class="m">16000</span>
+outdir: <span class="s2">&quot;data/continuity&quot;</span>
+suffix: replace_target100ms_gap100ms_snr-20
+
+<span class="c1"># sounds setting</span>
+sound-generation-pipeline: <span class="o">[</span>colored_noise<span class="o">]</span>
+colored-noise-color: <span class="o">[</span>pink<span class="o">]</span>
+colored-noise-duration: <span class="o">[</span><span class="m">30000</span><span class="o">]</span>
+colored-noise-num-signals: <span class="m">1</span>
+
+<span class="c1"># stimulus setting</span>
+target-duration: <span class="m">100</span>
+gap-duration: <span class="m">100</span>
+gap-method: replace
+gap-ramp-duration: <span class="m">5</span>
+target-snr: -20
+
+<span class="c1"># postprocessings setting</span>
+postprocess-pipeline: <span class="o">[</span>declip, apply_ramp<span class="o">]</span>
+declip-thres: <span class="m">1</span>
+apply-ramp-duration: <span class="m">5</span>
+apply-ramp-wfunction: hann
+apply-ramp-position: both
+
+<span class="c1"># visualization</span>
+visualization-pipeline: <span class="o">[</span>waveform, spectrogram, spectrum, mps<span class="o">]</span>
+visualization-outdir: <span class="s2">&quot;data/continuity/vis&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>and the auditory stimulus will be generated by assigning <code class="docutils literal notranslate"><span class="pre">--wavlist</span></code> to <code class="docutils literal notranslate"><span class="pre">wavlist.txt</span></code> as well.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">generate.py --conf conf/continuity.conf --wavlist wavlist.txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="getting_started.html" title="previous page">Getting Started</a>
+    <a class='right-next' id="next-link" href="visualization.html" title="next page">Visualization</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Takanori Ashihara.<br/>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

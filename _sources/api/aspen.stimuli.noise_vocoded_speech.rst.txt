@@ -1,0 +1,29 @@
+aspen.stimuli.noise\_vocoded\_speech
+====================================
+
+.. automodule:: aspen.stimuli.noise_vocoded_speech
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      NoiseVocodedSpeech
+   
+   
+
+   
+   
+   
+
+
+

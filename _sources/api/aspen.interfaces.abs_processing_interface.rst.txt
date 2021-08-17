@@ -1,0 +1,29 @@
+aspen.interfaces.abs\_processing\_interface
+===========================================
+
+.. automodule:: aspen.interfaces.abs_processing_interface
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      AbsProcessingInterface
+   
+   
+
+   
+   
+   
+
+
+

@@ -1,0 +1,37 @@
+﻿aspen.processings
+=================
+
+.. automodule:: aspen.processings
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   aspen.processings.amplitude_maximize
+   aspen.processings.apply_ramp
+   aspen.processings.declip
+   aspen.processings.extract_envelope
+   aspen.processings.filter_signal
+   aspen.processings.modulation_power_spectrum
+   aspen.processings.normalize
+

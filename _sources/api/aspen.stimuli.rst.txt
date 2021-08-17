@@ -1,0 +1,38 @@
+﻿aspen.stimuli
+=============
+
+.. automodule:: aspen.stimuli
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+
+
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   aspen.stimuli.auditory_streaming
+   aspen.stimuli.continuity
+   aspen.stimuli.identity
+   aspen.stimuli.iterated_rippled_noise
+   aspen.stimuli.locally_time_reversed_speech
+   aspen.stimuli.modulation_filtered_speech
+   aspen.stimuli.noise_vocoded_speech
+   aspen.stimuli.verbal_transformation
+
