@@ -10,9 +10,7 @@ import sounddevice as sd
 import soundfile as sf
 
 
-def add_prefix_suffix(
-    basedname: Optional[str], prefix: Optional[str] = None, suffix: Optional[str] = None
-) -> str:
+def add_prefix_suffix(basedname: Optional[str], prefix: Optional[str] = None, suffix: Optional[str] = None) -> str:
     """add `prefix` and `suffix` to input string with hyphens
 
     Args:
@@ -57,7 +55,7 @@ class WavReader(object):
                         continue
                     try:
                         k = os.path.splitext(os.path.basename(line))[0]
-                        v, sr = librosa.load(line, None, dtype=np.float64)
+                        v, sr = librosa.load(line, sr=None, dtype=np.float64)
                     except Exception:
                         raise
                     yield k, (sr, v)
@@ -81,9 +79,7 @@ class WavWriter(object):
         if wspecifier is not None:
             raise ValueError("Not supported to use wspecifier. Use kaldiio instead.")
         if write_function is not None:
-            raise ValueError(
-                "Not supported to use write_function. Use kaldiio instead."
-            )
+            raise ValueError("Not supported to use write_function. Use kaldiio instead.")
         self.initialized = True
         self.closed = False
 
@@ -109,9 +105,7 @@ class NumpyPlayer(object):
         if wspecifier is not None:
             raise ValueError("Not supported to use wspecifier. Use kaldiio instead.")
         if write_function is not None:
-            raise ValueError(
-                "Not supported to use write_function. Use kaldiio instead."
-            )
+            raise ValueError("Not supported to use write_function. Use kaldiio instead.")
         self.initialized = True
         self.closed = False
 

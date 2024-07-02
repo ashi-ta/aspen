@@ -11,7 +11,7 @@ with open(os.path.join(wd, "README.md"), "r", encoding="utf8") as f:
     long_description = f.read()
 
 install_requires = [
-    "numpy",
+    "numpy < 2.0.0",
     "scipy",
     "matplotlib",
     "configargparse",

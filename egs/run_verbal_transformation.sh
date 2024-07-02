@@ -10,7 +10,7 @@ wavlist=$1
 
 CMDNAME=`basename $0`
 if [ $# -ne 1 ]; then
-  echo "Usage: $CMDNAME wavlist" 1>&2
+  echo "Usage: $CMDNAME wavlist (A wavlist is a file that lists the paths of wav files in a bullet-point format.)" 1>&2
   exit 1
 fi
 

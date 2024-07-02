@@ -37,10 +37,19 @@ class PureTone(AbsCommonInterface, AbsSoundInterface):
         pure_tone_num_signals: int = 1,
         samp_freq: int = 16000,
     ):
+        self.num_signals = pure_tone_num_signals
+        assert self.num_signals == len(
+            pure_tone_duration
+        ), f"Should specify same number of parameters for pure-tone-duration ({self.num_signals} vs. {len(pure_tone_duration)})"
+        assert self.num_signals == len(
+            pure_tone_freq
+        ), f"Should specify same number of parameters for pure-tone-freq ({self.num_signals} vs. {len(pure_tone_freq)})"
+        assert self.num_signals == len(
+            pure_tone_phase
+        ), f"Should specify same number of parameters ({self.num_signals} vs. {len(pure_tone_phase)})"
         self.duration = pure_tone_duration
         self.freq = pure_tone_freq
         self.phase = pure_tone_phase
-        self.num_signals = pure_tone_num_signals
         self.samp_freq = samp_freq
 
     @staticmethod
@@ -71,8 +80,7 @@ class PureTone(AbsCommonInterface, AbsSoundInterface):
             "--pure-tone-num-signals",
             type=int,
             default=1,
-            help="Number of signals. If this value greater than 2,"
-            "the other arguments should contain 2 types.",
+            help="Number of signals. If this value greater than 2," "the other arguments should contain 2 types.",
         )
         return parser
 

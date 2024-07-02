@@ -17,8 +17,9 @@ max_temporal_modulation=500
 
 CMDNAME=`basename $0`
 if [ $# -ne 1 ]; then
-  echo "Usage: $CMDNAME wavlist" 1>&2
-  exit 1
+  echo "Usage: $CMDNAME wavlist (A wavlist is a file that lists the paths of wav files in a bullet-point format.)" 1>&2
+  echo "Here, sample_speech_list.txt is used." 1>&2
+  wavlist=sample_speech_list.txt
 fi
 
 if [ ${stage} -le 1 ] && [ ${stop_stage} -ge 1 ]; then

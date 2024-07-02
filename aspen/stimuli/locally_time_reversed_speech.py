@@ -66,7 +66,7 @@ class LocallyTimeReversedSpeech(AbsCommonInterface, AbsStimulusInterface):
         stimulus = x[0]
         t = stimulus.shape[0]
         reverse_duration = int(self.reverse_duration * self.samp_freq / 1000)
-        head = librosa.util.frame(stimulus, reverse_duration, reverse_duration, axis=0)
+        head = librosa.util.frame(stimulus, frame_length=reverse_duration, hop_length=reverse_duration, axis=0)
         boundary = (t // reverse_duration) * reverse_duration
 
         if not self.randomize:
